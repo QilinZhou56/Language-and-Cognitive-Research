@@ -1,0 +1,183 @@
+,Adjective,Referent,duplicate
+0,First,cereal,1
+1,French,bread,1
+2,Indian,corn,8
+3,Total,cereal,1
+4,allergic,cake,1
+5,allergic,muffin,2
+6,areplain,muffin,1
+7,becausea,pumpkin,1
+8,becausesome,ice cream,1
+9,best,cake,1
+10,best,pretzel,1
+11,big,bread,1
+12,big,broccoli,2
+13,big,corn,1
+14,big,cracker,1
+15,big,milk,1
+16,big,muffin,1
+17,big,pineapple,1
+18,big,pretzel,3
+19,big,pumpkin,2
+20,biggest,muffin,1
+21,black,corn,1
+22,black,ice cream,1
+23,black,orange,1
+24,black,pineapple,1
+25,black,strawberry,1
+26,blue,cracker,1
+27,blue,ice cream,1
+28,blue,pumpkin,1
+29,blueberry,strawberry,1
+30,bottom,muffin,1
+31,brown,pineapple,1
+32,brown,strawberry,1
+33,call-,orange,1
+34,cereal,cereal,1
+35,clean,corn,1
+36,cold,cake,2
+37,cold,ice cream,2
+38,cold,milk,1
+39,color,corn,1
+40,crispier,pretzel,1
+41,crunchy,cracker,3
+42,cute,pretzel,1
+43,dark,ice cream,1
+44,dead,corn,1
+45,delicious,corn,1
+46,different,cereal,2
+47,different,corn,2
+48,different,pie,1
+49,dirty,banana,1
+50,dry,cereal,1
+51,dry,milk,1
+52,easier,corn,1
+53,everyday,milk,1
+54,ex)cept,cereal,1
+55,favorite,carrot,1
+56,favorite,ice cream,1
+57,flat,ice cream,1
+58,fresh,corn,1
+59,fresh,milk,1
+60,full,corn,1
+61,good,banana,2
+62,good,bread,4
+63,good,broccoli,2
+64,good,carrot,2
+65,good,cheese,5
+66,good,ice cream,1
+67,good,orange,1
+68,good,pie,1
+69,good,pineapple,1
+70,good,popcorn,1
+71,good,pretzel,5
+72,green,broccoli,1
+73,green,pineapple,3
+74,hard,cookie,1
+75,hard,pie,1
+76,hardest,corn,1
+77,healthy,broccoli,1
+78,healthy,cereal,1
+79,healthy,ice cream,1
+80,healthy,milk,1
+81,healthy,pie,1
+82,healthy,pineapple,1
+83,healthy,pretzel,1
+84,hungry,banana,1
+85,hungry,carrot,1
+86,indian,corn,1
+87,jelly,pie,1
+88,last,broccoli,1
+89,last,cake,1
+90,last,cereal,2
+91,last,orange,1
+92,last,popcorn,4
+93,leafs,strawberry,2
+94,light,cracker,1
+95,little,broccoli,1
+96,little,corn,1
+97,little,cracker,2
+98,little,ice cream,1
+99,little,muffin,1
+100,little,orange,2
+101,little,pineapple,2
+102,little,pretzel,1
+103,little,strawberry,2
+104,long,corn,1
+105,long,orange,1
+106,mean,pumpkin,1
+107,more,broccoli,1
+108,more,strawberry,1
+109,much,cereal,1
+110,much,ice cream,1
+111,much,milk,1
+112,neat,corn,2
+113,neat,pie,1
+114,nice,pumpkin,1
+115,nuts,muffin,1
+116,okay,popcorn,1
+117,only,milk,1
+118,only,pretzel,2
+119,orange,cracker,2
+120,orange,ice cream,2
+121,orange,muffin,2
+122,orange,orange,11
+123,orange,pineapple,3
+124,orange,pumpkin,5
+125,other,broccoli,1
+126,other,cake,1
+127,other,cereal,2
+128,other,ice cream,1
+129,other,pie,1
+130,peel,corn,1
+131,pet,muffin,1
+132,pink,ice cream,2
+133,plain,corn,2
+134,plain,muffin,1
+135,plain,pumpkin,1
+136,pokey,pineapple,2
+137,pumpkin,pie,5
+138,pumpkin,pumpkin,3
+139,red,corn,1
+140,red,strawberry,3
+141,regular,cheese,1
+142,regular,corn,1
+143,right,corn,2
+144,right,milk,1
+145,right,strawberry,3
+146,same,corn,1
+147,scary,pumpkin,1
+148,sesame,pretzel,3
+149,sick,strawberry,1
+150,silly,pumpkin,1
+151,sippy,milk,1
+152,smallest,muffin,1
+153,square,cracker,1
+154,sugary,cracker,1
+155,sugary,pretzel,1
+156,sure,strawberry,1
+157,sweet,cookie,1
+158,sweet,ice cream,2
+159,sweet,pie,1
+160,sweet,popcorn,1
+161,sweet,pumpkin,1
+162,sweet,strawberry,2
+163,thirsty,milk,1
+164,twisty,pretzel,1
+165,warm,milk,1
+166,white,cracker,2
+167,white,milk,1
+168,white,orange,1
+169,whole,banana,2
+170,whole,ice cream,2
+171,yellow,cheese,1
+172,yellow,corn,1
+173,yucky,ice cream,1
+174,yummy,broccoli,1
+175,yummy,cake,2
+176,yummy,cereal,2
+177,yummy,corn,1
+178,yummy,ice cream,1
+179,yummy,orange,1
+180,yummy,pie,1
+181,yummy,strawberry,2

@@ -1,0 +1,865 @@
+,Order,ID,Speech,Feature,referent,Adjectives(NLTK predictions_seperated by blank line),Adjectives(Spacy predictions),Adjectives_Spacy_sm
+0,1.0,7.0,CHI:        a cracker.,L,cracker,cracker,cracker,
+1,1.0,7.0,"CHI:        a cracker that's that's blue and a I mean a, orange and white.",L+P,cracker,blue,blue,"['blue', 'orange', 'white']"
+2,1.0,7.0,CHI:        it's a colors.,P,cracker,white,orange,
+3,1.0,7.0,CHI:        it can eat.,F,cracker,orange,white,
+4,1.0,7.0,CHI:        it eats.,,cracker,white,orange,
+5,1.0,7.0,CHI:          this is orange and white.,P,cracker,thirteen,white,"['orange', 'white']"
+6,2.0,8.0,CHI:        a cracker.,L,cracker,light,light,
+7,2.0,8.0,CHI:        it's a saltine cracker.,T+L,cracker,light,crunchy,
+8,2.0,8.0,CHI:        and it has holes in it.,P,cracker,crunchy,little,
+9,2.0,8.0,CHI:        it has one two three four five six seven eight nine ten eleven twelve thirteen fourteen.,P,cracker,little,sugary,
+10,2.0,8.0,CHI:        fourteen.,P,cracker,sugary,square,
+11,2.0,8.0,CHI:        and it's light very very light gold.,P,cracker,shaped,crunchy,['light']
+12,22.0,5.0,CHI:        nothing.,,cracker,square,little,
+13,22.0,5.0,CHI:        well crackers are crunchy and they're squares.,P+L,cracker,crunchy,crunchy,['crunchy']
+14,22.0,5.0,CHI:        and they got little holes.,P,cracker,little,big,['little']
+15,22.0,5.0,CHI:        and people love them the most.,I,cracker,crunchy,ice cream,
+16,22.0,5.0,CHI:        and crackers are sugary.,P+L,cracker,Little,black,['sugary']
+17,23.0,6.0,CHI: a cracker.,L,cracker,big,little,
+18,23.0,6.0,CHI: crackers what you eat.,F+L,cracker,ice cream,orange,
+19,23.0,6.0,CHI: and and my brother Firstname he likes crackers.,I+L,cracker,black,orange,
+20,23.0,6.0,CHI: and and and everytime when we say crackers he says cracker cracker.,I+L,cracker,little,pink,
+21,23.0,6.0,CHI: and this one has holes.,P,cracker,orange,pink,
+22,23.0,6.0,CHI: and it's a shaped square.,P,cracker,dark,dark,
+23,23.0,6.0,CHI:   this is food.,T,cracker,good,good,
+24,23.0,6.0,CHI: you eat it and it's and it's square and it has holes in it.,F+P,cracker,next,sweet,['square']
+25,23.0,6.0,CHI: it's called a cracker and you're allowed to eat it.,F+L,cracker,ice,healthy,
+26,12.0,45.0,CHI:        a cracker.,L,cracker,sweet,sweet,
+27,12.0,45.0,CHI:        it has holes in it.,P,cracker,healthy,cold,
+28,12.0,45.0,CHI:        you eat it.,F,cracker,ice,favorite,
+29,13.0,58.0,CHI:        a cracker.,L,cracker,sweet,blue,
+30,13.0,58.0,CHI:        they're crunchy.,P,cracker,cold,other,['crunchy']
+31,13.0,58.0,CHI:        they have holes in them.,P,cracker,ice,cold,
+32,13.0,58.0,CHI:        so the you eat them.,F,cracker,ice,much,
+33,13.0,58.0,CHI:        you can eat them because they have holes in them that you can eat.,F+P,cracker,blue,becausesome,
+34,13.0,58.0,CHI:        and they have crumbs or .,P,cracker,ice,yucky,
+35,29.0,48.0,CHI:        a cracker.,L,cracker,other,whole,
+36,29.0,48.0,CHI:        you can eat it.,F,cracker,cold,yummy,
+37,29.0,48.0,CHI:        it has little holes in it ,P,cracker,ice,whole,['little']
+38,19.0,20.0,CHI:        but I can help you out on this one.,,cracker,ice,flat,
+39,19.0,20.0,CHI:        a cracker.,L,cracker,much,pumpkin,
+40,19.0,20.0,CHI:        it's a soup cracker.,T,cracker,yucky,orange,
+41,19.0,20.0,CHI:        and you could eat it and it's very crunchy.,F+P,cracker,whole,becausea,['crunchy']
+42,19.0,20.0,CHI:        what's his name?,,cracker,yummy,orange,
+43,19.0,20.0,CHI:        laughs I thought you call him Little Piggy.,,cracker,whole,blue,
+44,19.0,20.0,CHI:        yes.,,cracker,much,pumpkin,
+45,19.0,20.0,CHI:        you could chew on it.,F,cracker,pumpkin,orange,
+46,19.0,20.0,CHI:        and you could make a big mess.,F,cracker,orange,sweet,['big']
+47,19.0,20.0,CHI:        and that's all I know.,I,cracker,becausea,pumpkin,
+48,,,,,,top,pumpkin,
+49,1.0,7.0,CHI:        a ice cream.,L,ice cream,sugary,orange,
+50,1.0,7.0,"CHI:        and a black little bit orange there, and pink.",P,ice cream,sweet,big,"['black', 'little', 'orange']"
+51,1.0,7.0,"CHI:        it's a have a thing on this, there.",P,ice cream,pumpkin,scary,
+52,1.0,7.0,"CHI:        this is, a  this is orange and pink.",P,ice cream,orange,orange,"['orange', 'pink']"
+53,2.0,8.0,CHI:        an ice cream cone.,L,ice cream,top,mean,
+54,2.0,8.0,"CHI:        it has pink for the ice cream and dark gold for,for the the I mean the cone.",P+L,ice cream,big,nice,"['pink', 'dark']"
+55,2.0,8.0,CHI:        you can have ice cream when you're outside like I do .,F+L+I,ice cream,scary,plain,
+56,2.0,8.0,CHI:         this one's gonna be a good one next.,,ice cream,mean,big,['good']
+57,2.0,8.0,CHI:        and it has squares on it.,P,ice cream,nice,silly,
+58,22.0,5.0,CHI:        ice cream.,L,ice cream,big,muffin,
+59,22.0,5.0,CHI:        I love ice cream!,I+L,ice cream,open,bottom,
+60,22.0,5.0,CHI:        well ice cream is sweet and it has sugar.,P+L,ice cream,silly,orange,['sweet']
+61,22.0,5.0,CHI:        so that's why I like ice cream.,I+L,ice cream,somethin,orange,
+62,22.0,5.0,CHI:        and ice cream isn't healthy.,P+L,ice cream,muffin,smallest,['healthy']
+63,23.0,6.0,CHI:  might like this treat.,I+T,ice cream,bottom,big,
+64,23.0,6.0,CHI: that's a cone ,P,ice cream,big,biggest,
+65,23.0,6.0,CHI: becauseof that part.,P,ice cream,little,little,
+66,23.0,6.0,CHI:   this is ice cream.,L,ice cream,chocolatechip,allergic,
+67,23.0,6.0,CHI: it's sweet and it's cold.,P,ice cream,allergic,allergic,"['sweet', 'cold']"
+68,23.0,6.0,CHI: you get them from ice cream stores.,F+L,ice cream,allergic,pet,
+69,23.0,6.0,CHI: or you could get them from stores.,F,ice cream,pet,plain,
+70,23.0,6.0,CHI: and their they have cones but sometimes you can get them out of bowls.,P+T,ice cream,plain,areplain,
+71,23.0,6.0,CHI:   this is a treat.,T,ice cream,areplain,nuts,
+72,23.0,6.0,CHI: and and you could you could go to ice cream stores and you could buy them.,F+L,ice cream,pineapple,nuts,
+73,23.0,6.0,CHI: or you could go ice cream stores you could get them out of cups or you could or you could get cones.,P+F+T+L,ice cream,black,pineapple,
+74,12.0,45.0,CHI:        that's ice cream.,L,ice cream,green,orange,
+75,12.0,45.0,CHI:        and you eat it.,F,ice cream,green,black,
+76,12.0,45.0,"CHI:        I don't, I don't like the, the cone.",I,ice cream,orange,green,
+77,12.0,45.0,CHI:        I like the ice cream.,I+L,ice cream,green,orange,
+78,12.0,45.0,CHI:        my favorite is blue.,I,ice cream,green,orange,"['favorite', 'blue']"
+79,13.0,58.0,CHI:        ice cream.,L,ice cream,pineapple,green,
+80,13.0,58.0,CHI:        you eat ice cream.,F+L,ice cream,little,green,
+81,13.0,58.0,"CHI:        and other people have ice cream from stores, too.",F+L,ice cream,pokey,little,['other']
+82,13.0,58.0,CHI:        ice cream is for licking or for eating with a spoon.,L+F,ice cream,ta,pokey,
+83,13.0,58.0,CHI:        you can eat it off a cone with a spoon or you can eat it from a bowl with a spoon.,F+P,ice cream,big,pokey,
+84,13.0,58.0,"CHI:        and I can lick it from a cone, or from in a bowl.",F+P,ice cream,little,brown,
+85,13.0,58.0,CHI:        I can do that.,F,ice cream,good,big,
+86,13.0,58.0,CHI:        unless it's cold I canput my tongue in.,F,ice cream,healthy,little,['cold']
+87,29.0,48.0,CHI:        ice cream cone.,L+P,ice cream,carrot,good,
+88,29.0,48.0,CHI:        this is a cone.,P,ice cream,favorite,healthy,
+89,29.0,48.0,CHI:        and this is ice cream.,L,ice cream,vegetable,carrot,
+90,29.0,48.0,CHI:        this is ice cream.,L,ice cream,good,favorite,
+91,29.0,48.0,CHI:        that's a cone.,P,ice cream,carrot,good,
+92,29.0,48.0,CHI:        and you eat the ice cream.,F+L,ice cream,good,good,
+93,29.0,48.0,CHI:        if you like cones you can eat the cone.,F,ice cream,bunny,hungry,
+94,29.0,48.0,"CHI:        I eat the cones because, I don't eat very much cones becausesome of them are yucky.",I+F,ice cream,carrots,cake,"['much', 'becausesome', 'yucky']"
+95,29.0,48.0,CHI:        but a whole bunch of them are yummy.,F+I,ice cream,hungry,last,"['whole', 'yummy']"
+96,29.0,48.0,CHI:        I like a whole bunch of those cones.,I+F,ice cream,cake,other,['whole']
+97,29.0,48.0,CHI:        I like the ones that have flat on the bottom.,I+T,ice cream,last,allergic,['flat']
+98,29.0,48.0,CHI:        but I like some that have point.,I+T,ice cream,other,best,
+99,29.0,48.0,CHI:        not very much though.,I,ice cream,chocolatechip,cold,
+100,19.0,20.0,CHI:        this is an ice cream cone.,L+P,ice cream,allergic,cold,
+101,,,,,,chocolate,yummy,
+102,1.0,7.0,"CHI:        it's orange becausea thing on the, top.",P,pumpkin,cold,orange,"['orange', 'becausea']"
+103,1.0,7.0,CHI:        a pumpkin.,L,pumpkin,cold,orange,
+104,1.0,7.0,CHI:        a orange well it's a like a on the ground.,P+F,pumpkin,yummy,little,
+105,1.0,7.0,CHI:        grows out.,F,pumpkin,orange,orange,
+106,2.0,8.0,CHI:        a pumpkin for a pumpkin.,L,pumpkin,little,orange,
+107,2.0,8.0,"CHI:       it's, it's for Halloween.",F,pumpkin,orange,last,
+108,2.0,8.0,"CHI:        it, and it has stripes on it.",P,pumpkin,last,orange,
+109,2.0,8.0,CHI:        it's orange.,P,pumpkin,orange,orange,['orange']
+110,2.0,8.0,CHI:        and it has a handle.,P,pumpkin,white,orange,
+111,2.0,8.0,"CHI:        it, and the handle's blue ",P,pumpkin,black,white,['blue']
+112,2.0,8.0,CHI:        and and that's all.,,pumpkin,little,orange,
+113,22.0,5.0,CHI:        pumpkin.,L,pumpkin,good,black,
+114,22.0,5.0,CHI:        I like pumpkins!,I+L,pumpkin,orange,little,
+115,22.0,5.0,CHI:        hey do people eat pumpkins?,F+L,pumpkin,orange,good,
+116,22.0,5.0,CHI:        I think no.,F,pumpkin,yummy,long,
+117,22.0,5.0,CHI:        becausepumpkins are a way lot sugary.,P+L,pumpkin,milk,orange,
+118,22.0,5.0,CHI:        you can't eat that that part points:picture.,F+P,pumpkin,sippy,call-,
+119,22.0,5.0,CHI:        that part's becauseit makes you hurt.,F+P,pumpkin,fresh,orange,
+120,22.0,5.0,CHI:        it makes you hurt.,,pumpkin,big,orange,
+121,23.0,6.0,CHI: pumpkin.,L,pumpkin,warm,orange,
+122,23.0,6.0,CHI: pumpkins are like in pumpkin pie.,P+F+L,pumpkin,white,yummy,['pumpkin']
+123,23.0,6.0,CHI: had it at my grandma's house my grandma Firstname.,I+F,pumpkin,only,milk,
+124,23.0,6.0,CHI: I know I liked it.,I,pumpkin,much,sippy,
+125,23.0,6.0,CHI: it's orange and has a stem.,P,pumpkin,dry,fresh,['orange']
+126,23.0,6.0,CHI: like a ⌊apple⌋.,T,pumpkin,thirsty,big,
+127,23.0,6.0,CHI: and it's and its  and it's sweet but you could have a pumpkin pie.,P+F+L,pumpkin,everyday,cold,"['sweet', 'pumpkin']"
+128,23.0,6.0,CHI:   this is a pumpkin.,L,pumpkin,collar,warm,
+129,23.0,6.0,CHI: you can make pumpkin pie out of this.,F+L,pumpkin,right,white,['pumpkin']
+130,12.0,45.0,CHI:        a pumpkin.,L,pumpkin,healthy,only,
+131,12.0,45.0,CHI:        it has a stem.,P,pumpkin,cookie,much,
+132,12.0,45.0,CHI:        yeah.,,pumpkin,hard,dry,
+133,12.0,45.0,"CHI:        we cut it, like a, [like a halloween].",F,pumpkin,sweet,thirsty,
+134,13.0,58.0,CHI:        a pumpkin.,L,pumpkin,bread,everyday,
+135,13.0,58.0,CHI:        pumpkins are orange.,L+P,pumpkin,bread,right,['orange']
+136,13.0,58.0,CHI:        from the top you carry it from where the stem is.,F+P,pumpkin,crunch,healthy,
+137,13.0,58.0,CHI:        and they grow in the dirt.,F,pumpkin,French,cookie,
+138,13.0,58.0,CHI:        and when they're when they're big and you can pull them out of the dirt.,P+F,pumpkin,cheese,hard,['big']
+139,13.0,58.0,CHI:        and they can come.,F,pumpkin,good,sweet,
+140,13.0,58.0,CHI:        and you can make things with them.,F,pumpkin,peanut,bread,
+141,13.0,58.0,CHI:        make a scary face.,F,pumpkin,good,French,['scary']
+142,13.0,58.0,"CHI:        and and you can do anything, with them.",F,pumpkin,good,good,
+143,29.0,48.0,CHI:        a pumpkin.,L,pumpkin,good,good,
+144,29.0,48.0,CHI:        it's orange.,P,pumpkin,big,good,['orange']
+145,29.0,48.0,CHI:        this is the stem.,P,pumpkin,pie,good,
+146,29.0,48.0,CHI:        and down here's the  this stem.,P,pumpkin,different,big,
+147,29.0,48.0,CHI:        you can make pumpkins into a mean pumpkin or a nice pumpkin.,F+L,pumpkin,other,pie,"['mean', 'nice']"
+148,29.0,48.0,CHI:        or you can make it into yourself.,F,pumpkin,neat,different,
+149,29.0,48.0,"CHI:        or, you could keep it plain and paint it.",F,pumpkin,good,other,['plain']
+150,29.0,48.0,CHI:        or you can cut it.,F,pumpkin,pineapple,neat,
+151,29.0,48.0,CHI:        but me and mom when we have big ones we jus- open up.,I+F,pumpkin,sweet,jelly,['big']
+152,29.0,48.0,CHI:        we don't decorate it.,I+F,pumpkin,pumpkin,good,
+153,29.0,48.0,CHI:        we don't make a silly face.,I+F,pumpkin,healthy,pumpkin,['silly']
+154,29.0,48.0,CHI:        because we like to play with the stuff inside of it.,I+F+P,pumpkin,yummy,pumpkin,
+155,29.0,48.0,CHI:        and sneezes.,,pumpkin,hard,sweet,
+156,29.0,48.0,"CHI:        and sometimes, my mom likes to eat the inside.",I+F+P,pumpkin,pumpkin,pumpkin,
+157,19.0,20.0,CHI:        a pumpkin.,L,pumpkin,banana,pumpkin,
+158,19.0,20.0,CHI:        you could put that out for Halloween.,F,pumpkin,banana,healthy,
+159,19.0,20.0,CHI:        me and my mommy carve pumpkins.,I+F+L,pumpkin,banana,yummy,
+160,19.0,20.0,CHI:        yes.,,pumpkin,whole,hard,
+161,19.0,20.0,CHI:        can I say somethin in his ear?,,pumpkin,whole,pumpkin,
+162,19.0,20.0,CHI:        you could eat them up.,F,pumpkin,good,banana,
+163,19.0,20.0,CHI:        you could carve them out.,F,pumpkin,good,dirty,
+164,,,,,,hungry,whole,
+165,1.0,7.0,CHI:        pie.,L,muffin,popcorn,whole,
+166,1.0,7.0,CHI:        orange and.,P,muffin,last,good,
+167,1.0,7.0,"CHI:        and when can that, be on the bottom points:picture.",P,muffin,like,good,['bottom']
+168,1.0,7.0,CHI:        it's orange and orange.,P,muffin,last,hungry,"['orange', 'orange']"
+169,1.0,7.0,CHI:        a orange and another orange.,,muffin,last,popcorn,
+170,2.0,8.0,CHI:        a cupcake.,L,muffin,last,last,
+171,2.0,8.0,CHI:        it has raisins in it or blueberries.,P,muffin,popcorn,last,
+172,2.0,8.0,CHI:        one time I went picking blueberries.,,muffin,becausepopcorn,last,
+173,2.0,8.0,CHI:        I had to have the smallest pan becauseI was the littlest.,,muffin,dad,last,['smallest']
+174,2.0,8.0,CHI:        firstname has had the big one but my mommy and daddy had the biggest.,,muffin,popcorn,okay,"['big', 'biggest']"
+175,2.0,8.0,CHI:        my daddy used what I used when he was little.,,muffin,good,good,['little']
+176,2.0,8.0,"CHI:        it has nuts in it, too.",P,muffin,sweet,sweet,
+177,22.0,5.0,CHI:        what is that?,,muffin,popcorn,strawberry,
+178,22.0,5.0,CHI:        I don't know.,I,muffin,popcorn,more,
+179,22.0,5.0,CHI:        well people like those things but I like eggs with frosting.,I+T,muffin,strawberry,sure,
+180,23.0,6.0,CHI: what is that?,,muffin,red,red,
+181,23.0,6.0,CHI: a cupcake?,L,muffin,red,leafs,
+182,23.0,6.0,CHI: a butter cupcake.,T+L,muffin,brown,red,
+183,23.0,6.0,CHI: it looks like a cupcake so I think it's a cupcake.,P+L,muffin,sick,leafs,
+184,23.0,6.0,"CHI: cupcakes, are, things that are like treats.",T+L,muffin,black,brown,
+185,23.0,6.0,CHI: what you could have like what you bring one to school for your birthday.,F,muffin,black,sick,
+186,23.0,6.0,CHI:   this is a treat.,T,muffin,strawberry,black,
+187,23.0,6.0,CHI: when when it's your birthday you bring it to school.,F,muffin,blueberry,blueberry,
+188,12.0,45.0,CHI:        cupcake.,L,muffin,sweet,sweet,
+189,12.0,45.0,CHI:        I think it's chocolate-chip cupcake.,I+L,muffin,yummy,yummy,
+190,12.0,45.0,CHI:        now I can't have chocolate.,I,muffin,sweet,yummy,
+191,12.0,45.0,CHI:        I ca- I'm allergic to peanuts.,I,muffin,little,sweet,['allergic']
+192,12.0,45.0,"CHI:        and I, and I have a dog and I'm allergic to dogs.",I,muffin,little,little,['allergic']
+193,12.0,45.0,"CHI:        but we we're keeping him, forever.",I,muffin,birdie,little,
+194,12.0,45.0,"CHI:        his name, my my dog's name is  [ pet].",I,muffin,red,red,['pet']
+195,12.0,45.0,CHI:        and I even have a toy dog named Winston.,I,muffin,cheese,right,
+196,12.0,45.0,CHI:        and it used to be my mom's.,I,muffin,good,right,
+197,12.0,45.0,CHI:        can't you?,,muffin,good,right,
+198,12.0,45.0,CHI:        I have to eat them,F,muffin,yellow,cheese,
+199,12.0,45.0,CHI:        he was trying to eat my nose.,,muffin,cheese,good,
+200,13.0,58.0,CHI:        a muffin.,L,muffin,good,good,
+201,13.0,58.0,CHI:        muffins have things on them.,L+P,muffin,regular,yellow,
+202,13.0,58.0,CHI:        and they have a wrapper on them.,P,muffin,good,good,
+203,13.0,58.0,CHI:        they they some have blueberries.,P,muffin,cheese,regular,
+204,13.0,58.0,CHI:        and some are plain.,P,muffin,good,good,['plain']
+205,13.0,58.0,"CHI:        and some, and some of them are areplain and they don't have anything on them.",P,muffin,cheese,good,['areplain']
+206,13.0,58.0,CHI:        and no nuts nuts.,P,muffin,cheese,cereal,['nuts']
+207,29.0,48.0,CHI: a cupcake.,L,muffin,cheese,last,
+208,29.0,48.0,CHI:        it gots nuts on it.,P,muffin,cereal,ex)cept,['nuts']
+209,29.0,48.0,CHI:        it gots a wrapper.,P,muffin,last,different,
+210,19.0,20.0,CHI:        this is a cupcake.,L,muffin,different,other,
+211,19.0,20.0,"CHI:        it has, what is that?",,muffin,other,last,
+212,19.0,20.0,CHI:        I can't know where it is.,I,muffin,down,First,
+213,,,,,,last,different,
+214,1.0,7.0,CHI:        that's orange and black and green.,P,pineapple,different,other,"['orange', 'black', 'green']"
+215,1.0,7.0,CHI:        a pinecone.,L,pineapple,other,Total,
+216,1.0,7.0,CHI:        it's orange and a green.,P,pineapple,down,cereal,['orange']
+217,1.0,7.0,CHI:          this is orange and green.,P,pineapple,Total,much,"['orange', 'green']"
+218,2.0,8.0,CHI:        a pineapple.,L,pineapple,much,dry,
+219,2.0,8.0,"CHI:        it has thorns, like stick",P+T,pineapple,dry,healthy,
+220,2.0,8.0,CHI:        it has green stuff on right here.,P,pineapple,healthy,yummy,['green']
+221,22.0,5.0,CHI:        Spongebob liveses in a pineapple.,I+F+L,pineapple,yummy,yummy,
+222,22.0,5.0,CHI:        I don't like to eat pineapples.,I+F+L,pineapple,yummy,corn,
+223,22.0,5.0,"CHI:        they, hurt me.",I+F,pineapple,corn,little,
+224,23.0,6.0,CHI: what is that called?,,pineapple,little,fresh,
+225,23.0,6.0,CHI: I don't know what's that called.,I,pineapple,fresh,clean,
+226,23.0,6.0,CHI: well this is a fruit.,T,pineapple,clean,yellow,
+227,23.0,6.0,CHI: it's a pineapple?,L,pineapple,different,different,
+228,23.0,6.0,CHI: and this is a pineapple.,L,pineapple,indian,color,
+229,23.0,6.0,CHI: and can you eat it?,F,pineapple,Indian,indian,
+230,23.0,6.0,"CHI: maybe in-maybe you could then make out a pineapple, pie.",F+T+L,pineapple,Indian,Indian,
+231,23.0,6.0,CHI:   this is a fruit,T,pineapple,Indian,plain,
+232,23.0,6.0,CHI: and maybe you could make pineapple pie.,F+T+L,pineapple,Indian,plain,
+233,12.0,45.0,CHI:        I don't know.,I,pineapple,same,easier,
+234,12.0,45.0,"CHI:        well that, it has, looks like it has prickles on it.",P,pineapple,different,Indian,
+235,12.0,45.0,CHI:        I think this is the one that my,I,pineapple,neat,hardest,
+236,12.0,45.0,"CHI:        I don't, I don't know.",,pineapple,Indian,Indian,
+237,12.0,45.0,CHI:        I don't know.,,pineapple,Indian,same,
+238,13.0,58.0,CHI:        pineapple.,L,pineapple,long,different,
+239,13.0,58.0,CHI:        pineapples have a little bit pokey on on the on the skin.,L+P,pineapple,big,neat,"['little', 'pokey']"
+240,13.0,58.0,"CHI:        the end, the ends have pokey bits on the ends.",P,pineapple,else,neat,['pokey']
+241,13.0,58.0,CHI:        and the green on the  on the pokey bits.,P,pineapple,Indian,Indian,
+242,13.0,58.0,CHI:        and it's brown  on the pokey bits.,P,pineapple,Indian,Indian,['brown']
+243,29.0,48.0,CHI:        I don't know.,I,pineapple,Indian,long,
+244,29.0,48.0,CHI:        orange.,T,pineapple,delicious,big,
+245,29.0,48.0,CHI:        is it pears?,T,pineapple,yummy,Indian,
+246,29.0,48.0,CHI:        I like pears.,I+T,pineapple,full,Indian,
+247,29.0,48.0,CHI:        you can eat it but you gotta peel off the skin first.,F+P,pineapple,right,Indian,
+248,29.0,48.0,CHI:        but we don't buy the big ones.,I+F,pineapple,regular,delicious,['big']
+249,29.0,48.0,CHI:        we buy the little ones in cans.,I+F,pineapple,red,yummy,['little']
+250,19.0,20.0,CHI:        I don't know what's that.,I,pineapple,black,full,
+251,19.0,20.0,CHI:        I don't know.,,pineapple,real,right,
+252,19.0,20.0,CHI:        it's good to for you to eat and it's healthy.,F,pineapple,dead,regular,"['good', 'healthy']"
+253,19.0,20.0,CHI:        you could eat them.,F,pineapple,pretzel,right,
+254,,,,,,twisty,red,
+255,4.0,22.0,CHI: a carrot.,L,carrot,sugary,black,
+256,4.0,22.0,CHI: this is my favorite vegetable.,I+T,carrot,big,peel,['favorite']
+257,4.0,22.0,CHI: you eat from here and you go all the way up till this.,F,carrot,little,dead,
+258,4.0,22.0,CHI: this is a carrot.,L,carrot,only,pretzel,
+259,7.0,34.0,CHI: a carrot.,L,carrot,only,twisty,
+260,7.0,34.0,CHI: that's where you bite in them.,F,carrot,good,sugary,
+261,7.0,34.0,CHI: I think.,I,carrot,healthy,big,
+262,7.0,34.0,CHI: and they're for eating.,F,carrot,good,little,
+263,7.0,34.0,"CHI: I think, that's it I know about carrots.",I,carrot,crispy,only,
+264,7.0,34.0,CHI: no.,,carrot,cute,only,
+265,7.0,34.0,CHI: banana.,L,carrot,good,good,
+266,7.0,34.0,CHI: my my sister actually eats some of the skin.,I+F,carrot,sesame,healthy,
+267,7.0,34.0,CHI: it's good.,I,carrot,sesame,best,['good']
+268,9.0,36.0,CHI:        and I see carrot.,L,carrot,good,good,
+269,9.0,36.0,CHI:        carrot.,,carrot,good,cute,
+270,9.0,36.0,CHI:        I like to eat carrots.,I+F+L,carrot,big,good,
+271,9.0,36.0,CHI:        they're good.,I,carrot,big,sesame,['good']
+272,9.0,36.0,CHI:        well he I like to eat carrots and he does too.,I+F+L+T,carrot,broccoli,sesame,
+273,9.0,36.0,CHI:        bunny rabbits like to eat carrots.,F+L,carrot,last,sesame,
+274,24.0,12.0,CHI:        carrot.,L,carrot,broccoli,crispier,
+275,24.0,12.0,CHI:         eat carrots.,F+L,carrot,good,good,
+276,24.0,12.0,CHI:        and you make snowmans with carrots.,F+L,carrot,vegetable,good,
+277,24.0,12.0,CHI:        bunnies eat carrots wait I already said that.,L,carrot,big,big,
+278,24.0,12.0,CHI:        I don't know anything else.,I,carrot,little,big,
+279,24.0,12.0,"CHI:        oh wait, crocodiles eat carrots.",F+L,carrot,good,broccoli,
+280,24.0,12.0,CHI:        eat carrots.,F+L,carrot,other,last,
+281,24.0,12.0,CHI:         I don't know.,I,carrot,big,good,
+282,24.0,12.0,CHI:        I can't think what it is.,I,carrot,dad,big,
+283,24.0,12.0,CHI:        let me think.,,carrot,healthy,little,
+284,24.0,12.0,CHI:        no I don't know.,I,carrot,yummy,good,
+285,24.0,12.0,CHI:        I don't know my ,,carrot,green,other,
+286,24.0,12.0,CHI:        probably you think.,,carrot,,big,
+287,24.0,12.0,CHI:        I don't know what it's about.,I,carrot,,healthy,
+288,24.0,12.0,CHI:        probably.,,carrot,,yummy,
+289,24.0,12.0,CHI:         I ate a banana l today but we have bananas in the car.,I+F+L,carrot,,more,
+290,24.0,12.0,CHI:        I'm hungry.,I,carrot,,green,['hungry']
+291,24.0,12.0,CHI:        you eat it.,F,carrot,,,
+292,,,,,,,,
+293,6.0,29.0,CHI: cake.,L,cake,,,
+294,6.0,29.0,"CHI: last time my momma had a birthday but I was like, I was like the other day but and then like my mommy.",I+F,cake,,,"['last', 'other']"
+295,6.0,29.0,CHI: her had stuff in it but I didn't like.,I+F,cake,,,
+296,6.0,29.0,CHI: I just ate the frosting of it and then I got another that had frosting on and I just ate the frosting off of it.,I+P+F,cake,,,
+297,6.0,29.0,CHI: because I just wanted to.,I,cake,,,
+298,6.0,29.0,CHI: and then and then we saved some for my daddy.,I,cake,,,
+299,8.0,30.0,CHI:        a cake.,L,cake,,,
+300,8.0,30.0,CHI:        what?,,cake,,,
+301,8.0,30.0,CHI:        you eat it.,F,cake,,,
+302,8.0,30.0,CHI:        and it's a chocolate cake.,T,cake,,,
+303,8.0,30.0,CHI:        it's a chocolate one.,T,cake,,,
+304,8.0,30.0,CHI:        it's a chocolate one.,,cake,,,
+305,12.0,45.0,CHI:        cupcake.,L,cake,,,
+306,12.0,45.0,CHI:        I think it's chocolate-chip cupcake.,I+L,cake,,,
+307,12.0,45.0,"CHI:        now I and,  I can't have chocolate.",I,cake,,,
+308,12.0,45.0,CHI:        I'm allergic to peanuts.,I,cake,,,['allergic']
+309,17.0,70.0,CHI:        a cake.,L,cake,,,
+310,17.0,70.0,CHI:        a cake.,L,cake,,,
+311,17.0,70.0,CHI:        it has chocolate and vanilla.,P,cake,,,
+312,18.0,63.0,CHI:        a piece of cake.,P+L,cake,,,
+313,18.0,63.0,CHI:        it has frosting on it.,P,cake,,,
+314,18.0,63.0,CHI:        that's my best part.,I,cake,,,['best']
+315,18.0,63.0,CHI:        frosting.,P,cake,,,
+316,18.0,63.0,CHI:        it has a lot of cake.,P+L,cake,,,
+317,18.0,63.0,CHI:        a lot of frosting I mean.,P,cake,,,
+318,20.0,3.0,CHI:        that's a piece of cake.,P+L,cake,,,
+319,20.0,3.0,CHI:        chocolate cake actually.,T+L,cake,,,
+320,20.0,3.0,CHI:        chocolate cake you eat it.,T+F+L,cake,,,
+321,20.0,3.0,CHI:        and I've got chocolate cake in my home.,T+I+L,cake,,,
+322,20.0,3.0,CHI:        it's and it's in the freezer.,I+F,cake,,,
+323,20.0,3.0,CHI:        but I also got vanilla cake.,I+T+L,cake,,,
+324,20.0,3.0,CHI:        it's cold.,I+P,cake,,,['cold']
+325,20.0,3.0,CHI:        but they but when we both them they were cold.,I+P,cake,,,['cold']
+326,20.0,3.0,CHI:        that's all I know.,I,cake,,,
+327,20.0,3.0,CHI:        but that's it's not all about cake but that it's all I know.,I+L,cake,,,
+328,21.0,4.0,CHI:        A slice of cake.,P+L,cake,,,
+329,21.0,4.0,"CHI:        there's, I think there's ice cream with the cake.",P+L,cake,,,
+330,21.0,4.0,CHI:        and there and there's kind of icing.,P,cake,,,
+331,21.0,4.0,CHI:        there's a kind of crust that is yummy.,P+I,cake,,,['yummy']
+332,23.0,6.0,CHI: what is that?,,cake,,,
+333,23.0,6.0,CHI: a cupcake?,L,cake,,,
+334,23.0,6.0,CHI: a butter cupcake.,T+L,cake,,,
+335,23.0,6.0,CHI: it looks like a cupcake so I think it's a cupcake.,P+L,cake,,,
+336,23.0,6.0,"CHI: cupcakes, are, things that are like treats.",T+L,cake,,,
+337,23.0,6.0,CHI: what you could have like what you bring one to school for your birthday.,F,cake,,,
+338,23.0,6.0,CHI: this is a treat.,T,cake,,,
+339,23.0,6.0,CHI: when when it's your birthday you bring it to school.,F,cake,,,
+340,27.0,31.0,CHI:        cake.,L,cake,,,
+341,27.0,31.0,CHI:        yummy.,I+P,cake,,,
+342,27.0,31.0,CHI:        you bake it.,F,cake,,,
+343,,,,,,,,
+344,2.0,8.0,CHI:        it has dots on here and orange.,P,orange,,,['orange']
+345,2.0,8.0,CHI:        a bunch of orange.,P,orange,,,
+346,2.0,8.0,CHI:        it has little orange dots.,P,orange,,,"['little', 'orange']"
+347,4.0,22.0,CHI: and you cut that off and you eat the orange.,F,orange,,,
+348,5.0,24.0,CHI:        it's orange.,P,orange,,,['orange']
+349,5.0,24.0,CHI:        and you pick the stem off.,F+P,orange,,,
+350,6.0,29.0,CHI: a orange.,L,orange,,,
+351,6.0,29.0,CHI: last night I had a orange when I was standing on my chair but I didn't break it.,I+L,orange,,,['last']
+352,6.0,29.0,CHI: then I when I bited but then I took it out.,I+F,orange,,,
+353,7.0,34.0,CHI: they're they have orange lines.,P,orange,,,['orange']
+354,8.0,30.0,CHI:        a orange.,L,orange,,,
+355,8.0,30.0,CHI:        it's orange.,,orange,,,['orange']
+356,13.0,58.0,CHI:        pumpkins are orange.,L+P,orange,,,['orange']
+357,15.0,61.0,CHI:        about about how it's white and orange with the black little stripes.,P,orange,,,"['white', 'orange', 'black', 'little']"
+358,17.0,70.0,CHI:        this is a orange.,L,orange,,,
+359,17.0,70.0,CHI:        this is the stem.,P,orange,,,
+360,17.0,70.0,CHI:        this is a orange.,L,orange,,,
+361,18.0,63.0,CHI:        an orange.,L,orange,,,
+362,18.0,63.0,CHI:        it's it's a fruit.,T,orange,,,
+363,18.0,63.0,CHI:        and it and it is good for you.,P,orange,,,['good']
+364,18.0,63.0,CHI:        and I don't like oranges anymore.,I+L,orange,,,
+365,18.0,63.0,CHI:        I used to eat them a lot but now I don't like them anymore.,I+F,orange,,,
+366,18.0,63.0,CHI:        and it has a stem.,P,orange,,,
+367,18.0,63.0,CHI:        and it's not very long.,P,orange,,,['long']
+368,20.0,3.0,CHI:        that's an orange.,L,orange,,,
+369,20.0,3.0,"CHI:        you, you eat oranges.",F+L,orange,,,
+370,20.0,3.0,CHI:        and oranges are orange.,P+L,orange,,,['orange']
+371,20.0,3.0,CHI:        but you know why oranges are call- are called oranges?,F+L,orange,,,['call-']
+372,20.0,3.0,CHI:        cause they're orange.,P,orange,,,['orange']
+373,20.0,3.0,CHI:        but those don't have bones.,P,orange,,,
+374,20.0,3.0,CHI:        does fruit have bones,P+T,orange,,,
+375,21.0,4.0,CHI:        orange.,L,orange,,,
+376,21.0,4.0,CHI:        well an orange is kind of like a thing you know I've had.,I+L,orange,,,
+377,21.0,4.0,CHI:        that I have smelled before.,I+F,orange,,,
+378,21.0,4.0,CHI:        yeah.,,orange,,,
+379,21.0,4.0,CHI:        do you know what it's called again?,I,orange,,,
+380,21.0,4.0,CHI:        and it's kind of like an orange.,T+L,orange,,,
+381,21.0,4.0,CHI:        I don't know.,I,orange,,,
+382,21.0,4.0,CHI:        well an orange is is a kind of food.,T+L,orange,,,
+383,21.0,4.0,CHI:        that you eat.,F,orange,,,
+384,21.0,4.0,CHI:        and we had it at school.,I+F,orange,,,
+385,21.0,4.0,CHI:        and some some people don't have it.,I+F,orange,,,
+386,21.0,4.0,CHI:        and I think you haven't tasted what I have.,F+I,orange,,,
+387,21.0,4.0,CHI:        it's kind of like an orange.,T+L,orange,,,
+388,21.0,4.0,CHI:        I don't know what it's called.,T+I,orange,,,
+389,23.0,6.0,"CHI: and, it's orange and has a stem.",P,orange,,,['orange']
+390,26.0,27.0,CHI:        and then it there would be orange lighting all over him.,I+F+P,orange,,,['orange']
+391,27.0,31.0,CHI:        orange.,L,orange,,,
+392,27.0,31.0,CHI:        it's fruit and it's yummy.,T+I+P,orange,,,['yummy']
+393,27.0,31.0,CHI:        you could you find it at the store.,F,orange,,,
+394,29.0,48.0,CHI:        orange.,T,orange,,,
+395,29.0,48.0,CHI:        is it pears?,T,orange,,,
+396,29.0,48.0,CHI:        I like pears.,I+T,orange,,,
+397,,,,,,,,
+398,8.0,30.0,CHI:        it needs milk.,F,milk,,,
+399,8.0,30.0,CHI:        I don't know anything else.,I,milk,,,
+400,10.0,39.0,CHI:        milk.,L,milk,,,
+401,10.0,39.0,CHI:        I love milk.,I+L,milk,,,
+402,10.0,39.0,CHI:        I always have it for breakfast in a sippy cup.,I+F,milk,,,['sippy']
+403,10.0,39.0,CHI:        because I I like it fresh and I like and I don't like putting it in a big boy cup.,I+F,milk,,,"['fresh', 'big']"
+404,10.0,39.0,"CHI:        well, well my mom always warms it up.",I+F,milk,,,
+405,10.0,39.0,CHI:        sometimes I drink it cold.,I+F+P,milk,,,['cold']
+406,10.0,39.0,CHI:        sometimes I drink it warm.,I+F+P,milk,,,['warm']
+407,10.0,39.0,CHI:        and that's all.,,milk,,,
+408,14.0,55.0,CHI:        milk.,L,milk,,,
+409,14.0,55.0,CHI:        you can drink it.,F,milk,,,
+410,14.0,55.0,CHI:        it's white.,P,milk,,,['white']
+411,14.0,55.0,CHI:        it goes in the glass.,P,milk,,,
+412,14.0,55.0,CHI:        you pour it.,F,milk,,,
+413,14.0,55.0,CHI:        and use liquid to make it.,F,milk,,,
+414,16.0,56.0,CHI:        milk.,L,milk,,,
+415,16.0,56.0,CHI:        you drink milk at a table for breakfast.,F+L,milk,,,
+416,16.0,56.0,CHI:        and lunch and dinner.,F,milk,,,
+417,16.0,56.0,CHI:        nothing left.,,milk,,,
+418,16.0,56.0,CHI:        that's the only thing I know about milk.,I+L,milk,,,['only']
+419,18.0,63.0,CHI:        cereal.,L,milk,,,
+420,18.0,63.0,CHI:        it doesn't have milk in it.,F+P,milk,,,
+421,18.0,63.0,CHI:        or maybe it's just maybe there's too much cereal and it's blocking it.,I+P+L,milk,,,['much']
+422,20.0,3.0,"CHI:       cereal we eat it but, but cereal, you always have to put it in a bowl.",F+P+L,milk,,,
+423,20.0,3.0,"CHI:        and, and you don't always have to eat it with milk.",F,milk,,,
+424,20.0,3.0,CHI:        not always.,,milk,,,
+425,20.0,3.0,"CHI:        and you gotta, and when you eat it with milk eat it with a spoon.",F,milk,,,
+426,20.0,3.0,CHI:        when it's dry you can do it with your hands or a spoon.,F,milk,,,['dry']
+427,21.0,4.0,CHI:        I think you take water and milk with it on your plate.,F+T,milk,,,
+428,24.0,12.0,CHI:        she drinks bottles of milk.,F,milk,,,
+429,24.0,12.0,CHI:        I love milk.,I+F,milk,,,
+430,25.0,16.0,CHI:        it's milk.,L,milk,,,
+431,25.0,16.0,CHI:        this milk drink is making me thirsty.,I+T+L,milk,,,['thirsty']
+432,26.0,27.0,CHI:        milk is a kind of drink.,T+L,milk,,,
+433,26.0,27.0,CHI:        and everyday I drink it.,I+F,milk,,,['everyday']
+434,26.0,27.0,"CHI:        well, if you leave it in the car you're your collar your car will stink right?",F,milk,,,
+435,26.0,27.0,CHI:        right?,,milk,,,['right']
+436,26.0,27.0,CHI:        milk makes you healthy.,F+L,milk,,,['healthy']
+437,27.0,31.0,CHI:        cereal.,L,milk,,,
+438,27.0,31.0,CHI:        could you put milk in it.,F+T,milk,,,
+439,,,,,,,,
+440,9.0,36.0,CHI:        a cookie.,L,cookie,,,
+441,9.0,36.0,CHI:        he I eat a cookie and it goes with my teeth.,F+L,cookie,,,
+442,9.0,36.0,CHI:        I eat it with my teeth.,F,cookie,,,
+443,9.0,36.0,"CHI:        he ate it all, look.",F,cookie,,,
+444,9.0,36.0,CHI:        he at it all up.,F,cookie,,,
+445,9.0,36.0,CHI:        he likes to eat the cookie.,I+F+L,cookie,,,
+446,9.0,36.0,CHI:        he ate it all up.,F,cookie,,,
+447,26.0,27.0,CHI:        and these are like cookie dough but they're hard when you bake them.,P+T+F,cookie,,,['hard']
+448,26.0,27.0,CHI:        guess what.,,cookie,,,
+449,26.0,27.0,CHI:        that's crust.,P,cookie,,,
+450,26.0,27.0,CHI:        but it's like cookie dough except it's not sweet.,P+T+I,cookie,,,['sweet']
+451,,,,,,,,
+452,4.0,22.0,CHI: bread.,L,bread,,,
+453,4.0,22.0,CHI: bread you it's chewy.,L+P,bread,,,
+454,4.0,22.0,CHI: I don't know.,,bread,,,
+455,4.0,22.0,CHI:  this is bread.,L,bread,,,
+456,4.0,22.0,CHI: cookie.,L,bread,,,
+457,4.0,22.0,CHI: a cookie goes crunch crunch.,L+P,bread,,,
+458,4.0,22.0,CHI: it breaks easily.,F,bread,,,
+459,5.0,24.0,CHI:        bread.,L,bread,,,
+460,5.0,24.0,CHI:        eat it you can put toast on it.,F+T,bread,,,
+461,5.0,24.0,CHI:        it's French toast.,T,bread,,,['French']
+462,5.0,24.0,CHI:        you eat it and you use it for your eggs.,F,bread,,,
+463,7.0,34.0,CHI: bread.,L,bread,,,
+464,7.0,34.0,CHI: it's used for eating.,F,bread,,,
+465,7.0,34.0,CHI: my mom use a lot of like these bread at home.,I+L+F,bread,,,
+466,7.0,34.0,CHI: kind of I like cheese plain.,I+L,bread,,,
+467,7.0,34.0,CHI: but some times I eat them with bread.,I+F,bread,,,
+468,9.0,36.0,CHI:        bread.,L,bread,,,
+469,9.0,36.0,CHI:        well when you eat bread it tastes good with peanut butter sandwich.,F+L+I,bread,,,['good']
+470,9.0,36.0,CHI:        that's so good.,I,bread,,,['good']
+471,9.0,36.0,CHI:        I like that.,I,bread,,,
+472,9.0,36.0,CHI:        it's so good.,I,bread,,,['good']
+473,9.0,36.0,CHI:        and I love it.,I,bread,,,
+474,18.0,63.0,CHI:        and once one time we when I was three and now I'm four.,,bread,,,
+475,18.0,63.0,CHI:        and and for a minute we ate it.,,bread,,,
+476,18.0,63.0,CHI:        and we put some some gumdrops on it to make it taste good.,,bread,,,['good']
+477,18.0,63.0,CHI:        and we also ate the gingerbread.,,bread,,,
+478,24.0,12.0,CHI:        bread.,L,bread,,,
+479,24.0,12.0,CHI:        to eat.,F,bread,,,
+480,24.0,12.0,CHI:        bread to eat.,L+F,bread,,,
+481,24.0,12.0,CHI:        put it in toasters.,F,bread,,,
+482,24.0,12.0,CHI:        cut it.,F,bread,,,
+483,24.0,12.0,CHI:        make macaroni and cheese with it.,F+T,bread,,,
+484,24.0,12.0,CHI:        and make sandwiches.,F+T,bread,,,
+485,26.0,27.0,CHI:        a bread a bread dough doughnut.,T,bread,,,
+486,26.0,27.0,CHI:        I mean a bread pretzel.,L,bread,,,
+487,26.0,27.0,CHI:        well I only know they're shaped like pretzels and and they're breaded.,P+T,bread,,,
+488,26.0,27.0,CHI:        and they're made out of bread.,F+T,bread,,,
+489,26.0,27.0,CHI:        and they're this big.,P,bread,,,['big']
+490,26.0,27.0,CHI:        and that's all I know.,I,bread,,,
+491,,,,,,,,
+492,10.0,39.0,CHI:        a pie.,L,pie,,,
+493,10.0,39.0,CHI:        well pies have different flavors in them.,L+P,pie,,,['different']
+494,10.0,39.0,CHI:        like apple pie.,T,pie,,,
+495,10.0,39.0,CHI:        strawberry pie.,T,pie,,,
+496,10.0,39.0,CHI:        and like other pies with fruit.,T+L+P,pie,,,['other']
+497,11.0,38.0,CHI:        apple pie.,L,pie,,,
+498,11.0,38.0,CHI:        it has apples in it.,P,pie,,,
+499,15.0,61.0,CHI:        a pie.,L,pie,,,
+500,15.0,61.0,"CHI:        these are neat pies because they have these, lines across.",I+P+L,pie,,,['neat']
+501,15.0,61.0,CHI:        you eat a pie.,F+L,pie,,,
+502,15.0,61.0,CHI:        I wonder what kind of pie that is.,T+L,pie,,,
+503,15.0,61.0,CHI:        me neither.,,pie,,,
+504,15.0,61.0,CHI:        I think I know if that that stuff.,I,pie,,,
+505,15.0,61.0,CHI:        I wasn't looking for tha +...,,pie,,,
+506,15.0,61.0,CHI:        I think it's a jelly pie.,I+T+L,pie,,,['jelly']
+507,15.0,61.0,CHI:        that would taste good.,I,pie,,,['good']
+508,15.0,61.0,CHI:        you can eat it.,F,pie,,,
+509,16.0,56.0,CHI:        pie.,L,pie,,,
+510,16.0,56.0,CHI:        I don't want to tell you any more.,I,pie,,,
+511,16.0,56.0,CHI:        you eat pie for dessert.,F+L,pie,,,
+512,16.0,56.0,CHI:        I had chocolate pie today after I had after for dessert after the feast.,I+L,pie,,,
+513,21.0,4.0,CHI:        a pumpkin pie.,L,pie,,,['pumpkin']
+514,23.0,6.0,CHI: you could then make out a pineapple pie.,F+T+L,pie,,,
+515,23.0,6.0,CHI: this is a fruit,T,pie,,,
+516,23.0,6.0,CHI: and maybe you could make pineapple pie.,F+T+L,pie,,,
+517,23.0,6.0,CHI: pumpkins are like in pumpkin pie.,P+F+L,pie,,,['pumpkin']
+518,23.0,6.0,CHI: had it at my grandma's house my grandma Firstname.,I+F,pie,,,
+519,23.0,6.0,CHI: I know I liked it.,I,pie,,,
+520,23.0,6.0,CHI: and it's and its and it's sweet but you could have a pumpkin pie.,P+F+L,pie,,,"['sweet', 'pumpkin']"
+521,23.0,6.0,CHI: this is a pumpkin.,L,pie,,,
+522,23.0,6.0,CHI: you can make pumpkin pie out of this.,F+L,pie,,,['pumpkin']
+523,25.0,16.0,CHI:        it's a pie.,L,pie,,,
+524,25.0,16.0,CHI:        pies are healthy for you and they're really yummy and and I don't know what else.,I+P+L,pie,,,"['healthy', 'yummy']"
+525,25.0,16.0,CHI:        I don't know what else.,,pie,,,
+526,25.0,16.0,CHI:        it's a pie.,L,pie,,,
+527,25.0,16.0,CHI:        hey it's just a pie.,L,pie,,,
+528,26.0,27.0,CHI:        a cherry pie.,L,pie,,,
+529,26.0,27.0,CHI:        they have cherries and and you bake them.,P+F,pie,,,
+530,26.0,27.0,CHI:        and these are like cookie dough but they're hard when you bake them.,P+T+F,pie,,,['hard']
+531,26.0,27.0,CHI:        guess what.,,pie,,,
+532,26.0,27.0,CHI:        that's crust.,P,pie,,,
+533,28.0,37.0,CHI:        pie.,L,pie,,,
+534,28.0,37.0,"CHI:        is this kind of pie, basket?",T+L,pie,,,
+535,28.0,37.0,CHI:        basket of peanuts?,T+P,pie,,,
+536,28.0,37.0,CHI:        is it pie?,L,pie,,,
+537,28.0,37.0,CHI:        I think pie.,L,pie,,,
+538,28.0,37.0,CHI:        peanuts in a pie.,P+L,pie,,,
+539,28.0,37.0,CHI:        like a peanut pie.,T+L,pie,,,
+540,28.0,37.0,CHI:        you know at school we had a pumpkin pie.,I+T+L,pie,,,['pumpkin']
+541,28.0,37.0,CHI:        but it was not in these kind of things.,I+T+P,pie,,,
+542,28.0,37.0,CHI:        it was on a napkin.,I+F,pie,,,
+543,28.0,37.0,CHI:        and I really liked it.,I,pie,,,
+544,28.0,37.0,CHI:        it had whipped cream on it.,I+F+T,pie,,,
+545,28.0,37.0,CHI:        well I know there is a cherry.,I+T,pie,,,
+546,28.0,37.0,CHI:        cherry pies.,T+L,pie,,,
+547,28.0,37.0,CHI:        and there's strawberry pies.,T+L,pie,,,
+548,28.0,37.0,CHI:        blueberry pies.,T+L,pie,,,
+549,28.0,37.0,CHI:        and that there is I've think I think there is banana pies.,T+L,pie,,,
+550,28.0,37.0,CHI:        there banana pies?,L,pie,,,
+551,28.0,37.0,CHI:        I think there is.,,pie,,,
+552,28.0,37.0,"CHI:        like if, people give monkeys a dessert then he would give a banana one.",F+T,pie,,,
+553,28.0,37.0,CHI:        banana pie like that.,T+L,pie,,,
+554,28.0,37.0,CHI:        you just make a pie and put bananas on it.,F+P+L,pie,,,
+555,28.0,37.0,CHI:        that's how you make a banana.,F+T+L,pie,,,
+556,28.0,37.0,CHI:        yep.,,pie,,,
+557,28.0,37.0,"CHI:        and, it just, let me think.",I,pie,,,
+558,28.0,37.0,CHI:        you can eat pies.,F+L,pie,,,
+559,28.0,37.0,CHI:        you can smell pies.,F+L,pie,,,
+560,28.0,37.0,CHI:        yep that's all that I know.,I,pie,,,
+561,,,,,,,,
+562,3.0,10.0,CHI:        a banana.,L,banana,,,
+563,3.0,10.0,"CHI:        they also have you can call it like, a peel.",P,banana,,,
+564,3.0,10.0,"CHI:        and, if you want, you if you don't want to get your hands dirty.",F,banana,,,['dirty']
+565,3.0,10.0,"CHI:        then, you can pull down the peel.",F,banana,,,
+566,3.0,10.0,CHI:        and then pull down to the rest of the peel.,F+L,banana,,,
+567,3.0,10.0,"CHI:        or if you want you can just pull the, whole peel off.",F,banana,,,['whole']
+568,4.0,22.0,CHI: it's a banana.,L,banana,,,
+569,4.0,22.0,CHI: you peel it off of the peel and you eat down down down down till the whole banana is gone.,F+L,banana,,,['whole']
+570,4.0,22.0,CHI: if you want it cut up for your baby you go cut cut cut cut.,F,banana,,,
+571,5.0,24.0,CHI:        banana.,L,banana,,,
+572,5.0,24.0,"CHI:        you eat it and, you, hold the peel.",F+P,banana,,,
+573,5.0,24.0,CHI:        yes.,,banana,,,
+574,5.0,24.0,CHI:        you don't eat the peel.,F+P,banana,,,
+575,7.0,34.0,CHI: banana.,L,banana,,,
+576,7.0,34.0,CHI: my my sister actually eats some of the skin.,I+F,banana,,,
+577,9.0,36.0,CHI:        banana.,L,banana,,,
+578,9.0,36.0,CHI:        I like to eat bananas.,I+F+L,banana,,,
+579,9.0,36.0,CHI:        they're good and they're.,I,banana,,,['good']
+580,9.0,36.0,CHI:        you need to learn to eat a banana.,I+F+L,banana,,,
+581,9.0,36.0,CHI:        well if you eat a banana you eat good fruit.,F+L+I+T,banana,,,['good']
+582,24.0,12.0,CHI:         I ate a banana l today but we have bananas in the car.,I+F+L,banana,,,
+583,24.0,12.0,CHI:        I'm hungry.,I,banana,,,['hungry']
+584,,,,,,,,
+585,6.0,29.0,CHI: popcorn.,L,popcorn,,,
+586,6.0,29.0,CHI: last night I watched Nemo but I don't really like to watch Nemo but I just have to.,I,popcorn,,,['last']
+587,6.0,29.0,CHI: but last time I turned it off because I didn't want my dad putting it on but then and becausemommy's bedroom because I want to watch it.,I,popcorn,,,['last']
+588,6.0,29.0,CHI: and then last night my friend Firstname becauseher ate popcorn but becausemm.,I+L,popcorn,,,['last']
+589,6.0,29.0,CHI: then her got like with just one seed in it but I just had like seven.,I+P,popcorn,,,
+590,6.0,29.0,CHI: and I don't really like that.,I,popcorn,,,
+591,6.0,29.0,CHI: becauseno.,,popcorn,,,
+592,6.0,29.0,CHI: because I didn't want to.,,popcorn,,,
+593,6.0,29.0,CHI: last night becauseI my dad and mom I mean my daddy and he went with his friend to there to a football and because I didn't go I stayed home with my mom.,I,popcorn,,,['last']
+594,17.0,70.0,CHI:        this is popcorn.,L,popcorn,,,
+595,17.0,70.0,CHI:        and this is the popcorn and that's the bowl.,L,popcorn,,,
+596,20.0,3.0,CHI:        whoa popcorn!,L,popcorn,,,
+597,20.0,3.0,CHI:        let's see.,,popcorn,,,
+598,20.0,3.0,"CHI:        popcorn it's, do you know why it's called popcorn?",I+L+F,popcorn,,,
+599,20.0,3.0,CHI:        because because when you put it in the microwave you eat it when it's done.,F,popcorn,,,
+600,20.0,3.0,CHI:        and it pops.,F,popcorn,,,
+601,20.0,3.0,CHI:        and then it turns into popcorn.,F+L,popcorn,,,
+602,20.0,3.0,CHI:        they're seeds that were inside the popcorn that haven't turned into popcorn.,P+F+L,popcorn,,,
+603,20.0,3.0,CHI:        but you can't eat the seeds.,F,popcorn,,,
+604,20.0,3.0,CHI:        you cannot eat the seeds.,,popcorn,,,
+605,20.0,3.0,CHI:        okay.,,popcorn,,,['okay']
+606,20.0,3.0,"CHI:        becauselet's see becausepopcorn sometimes popcorn your mom when you tell your mom and when you, my dad my mom doesn't know how to make popcorn very well but my dad does.",I+F+L,popcorn,,,
+607,20.0,3.0,CHI:        and sometimes when I tell him to put butter he always puts butter when I tell him to.,I+F,popcorn,,,
+608,20.0,3.0,CHI:        cause it taste good with butter.,I+P,popcorn,,,['good']
+609,20.0,3.0,"CHI:        sometimes I, but sometimes when I tell him he doesn't.",I,popcorn,,,
+610,20.0,3.0,CHI:        because he because because butter is too sweet for you.,I+P,popcorn,,,['sweet']
+611,20.0,3.0,CHI:        because that's all about popcorn I know.,I+L,popcorn,,,
+612,21.0,4.0,CHI:        that's popcorn.,L,popcorn,,,
+613,21.0,4.0,CHI:        I think you know about popcorn.,I+L,popcorn,,,
+614,21.0,4.0,CHI:        well popcorn is what you eat.,F+L,popcorn,,,
+615,21.0,4.0,CHI:        and sometimes you can have popcorn at my house you know.,F+I+L,popcorn,,,
+616,21.0,4.0,CHI:        and that's a glass bowl that the popcorn is supposed.,P+L,popcorn,,,
+617,,,,,,,,
+618,10.0,39.0,CHI:        strawberry pie.,T,strawberry,,,
+619,11.0,38.0,CHI:        strawberry.,L,strawberry,,,
+620,11.0,38.0,CHI:        I just can't think of more.,I,strawberry,,,['more']
+621,11.0,38.0,CHI:        sure.,,strawberry,,,['sure']
+622,11.0,38.0,CHI:        strawberry.,L,strawberry,,,
+623,11.0,38.0,CHI:        my sister doesn't like any red things.,I+P,strawberry,,,['red']
+624,14.0,55.0,CHI:        strawberry.,L,strawberry,,,
+625,14.0,55.0,CHI:        it it has leafs.,P,strawberry,,,['leafs']
+626,14.0,55.0,CHI:        it has a root.,P,strawberry,,,
+627,14.0,55.0,CHI:        it's red.,P,strawberry,,,['red']
+628,14.0,55.0,CHI:        it has leafs.,P,strawberry,,,['leafs']
+629,14.0,55.0,CHI:        and it grows.,F,strawberry,,,
+630,14.0,55.0,CHI:        and sometimes it's brown.,F,strawberry,,,['brown']
+631,14.0,55.0,CHI:        gardener.,L,strawberry,,,
+632,15.0,61.0,"CHI:        I used, I like strawberries but I'm sick of them right now.",I+L,strawberry,,,['sick']
+633,15.0,61.0,"CHI:        watch out for some of these, spines that are black.",P,strawberry,,,['black']
+634,15.0,61.0,CHI:        because then you can't eat the ones with the black.,F,strawberry,,,
+635,15.0,61.0,CHI:        they grow on bushes.,F,strawberry,,,
+636,15.0,61.0,CHI:        I haven't been strawberry picking but I have been blueberry picking.,I+L,strawberry,,,['blueberry']
+637,15.0,61.0,CHI:        and apple picking with my school once.,,strawberry,,,
+638,25.0,16.0,CHI:        this is a strawberry.,L,strawberry,,,
+639,25.0,16.0,CHI:        it's sweet and yummy and.,I+P,strawberry,,,"['sweet', 'yummy']"
+640,25.0,16.0,CHI:        the strawberry is yummy and sweet and and and those little dots in the strawberry is seeds.,P+L,strawberry,,,"['yummy', 'sweet', 'little']"
+641,25.0,16.0,CHI:        I used to eat them the seeds.,I+F+P,strawberry,,,
+642,25.0,16.0,CHI:        I eat the seeds you know.,I,strawberry,,,
+643,25.0,16.0,CHI:        I'm like a little birdie eat the seeds.,I+F+P+T,strawberry,,,['little']
+644,25.0,16.0,CHI:        yeah I'm kinda like a birdie I eat the seeds.,,strawberry,,,
+645,26.0,27.0,CHI:        that's a strawberry.,L,strawberry,,,
+646,26.0,27.0,"CHI:        well that, you you, only eat it.",F,strawberry,,,
+647,26.0,27.0,"CHI:        and you, and it's red.",P,strawberry,,,['red']
+648,26.0,27.0,CHI:        and it's a type of fruit right?,T,strawberry,,,['right']
+649,26.0,27.0,CHI:        and it comes from trees right?,F,strawberry,,,['right']
+650,26.0,27.0,CHI:        actually they plant it right?,F,strawberry,,,['right']
+651,26.0,27.0,CHI:        I think they plant it on a strawberry tree.,F+L,strawberry,,,
+652,26.0,27.0,CHI:        but I think farmers plant it in in their in their gardens and then they give it to the farmer's market.,F,strawberry,,,
+653,26.0,27.0,CHI:        and then they buy it.,F,strawberry,,,
+654,26.0,27.0,CHI:        and sometimes they even do it at a farm.,F,strawberry,,,
+655,28.0,37.0,CHI:        a strawberry.,L,strawberry,,,
+656,28.0,37.0,"CHI:        well I don't know why these have, leafs on them.",I+P,strawberry,,,
+657,28.0,37.0,CHI:        do you think because I think because it was on a tree.,I+F,strawberry,,,
+658,28.0,37.0,CHI:        do strawberries grow on trees?,F+L,strawberry,,,
+659,28.0,37.0,CHI:        or strawberry bushes.,F+L,strawberry,,,
+660,28.0,37.0,CHI:        bushes have leafs on them?,F+P,strawberry,,,
+661,28.0,37.0,"CHI:        strawberries, can be on paper.",P+L,strawberry,,,
+662,28.0,37.0,CHI:        you can make strawberries on paper.,P+L,strawberry,,,
+663,28.0,37.0,"CHI:        they, can, do, let me think.",I,strawberry,,,
+664,28.0,37.0,"CHI:        they can, they grow.",F,strawberry,,,
+665,28.0,37.0,CHI:        I don't know what they grow on.,I+F,strawberry,,,
+666,28.0,37.0,CHI:        okay what else can it do?,F,strawberry,,,
+667,28.0,37.0,"CHI:        I think it can do, I think it can, do, something, like, they can go.",F,strawberry,,,
+668,28.0,37.0,"CHI:        they can, go into water.",F,strawberry,,,
+669,28.0,37.0,CHI:        and there's strawberry pies.,T+L,strawberry,,,
+670,,,,,,,,
+671,3.0,10.0,CHI:        a chunk of cheese,P+L,cheese,,,
+672,3.0,10.0,CHI:        mice like it.,F,cheese,,,
+673,3.0,10.0,CHI:        it's very good food.,I,cheese,,,['good']
+674,3.0,10.0,CHI:        and any kind of cheese is good food.,T+L+I+F,cheese,,,['good']
+675,3.0,10.0,CHI:        it is yellow.,P,cheese,,,['yellow']
+676,4.0,22.0,CHI: cheese.,L,cheese,,,
+677,4.0,22.0,CHI: it has spots.,P,cheese,,,
+678,4.0,22.0,CHI: chedder cheese.,L+T,cheese,,,
+679,5.0,24.0,CHI:        cheese.,L,cheese,,,
+680,5.0,24.0,"CHI:        mice eat it, for a treat.",F,cheese,,,
+681,5.0,24.0,CHI:        yes.,,cheese,,,
+682,5.0,24.0,CHI:        you eat it.,F,cheese,,,
+683,7.0,34.0,CHI: a cheese.,L,cheese,,,
+684,7.0,34.0,CHI: kind of I like cheese plain.,I+L,cheese,,,
+685,7.0,34.0,CHI: but some times I eat them with bread.,I+F,cheese,,,
+686,7.0,34.0,CHI: they taste really good. ,I,cheese,,,['good']
+687,7.0,34.0,CHI: sometimes you eat them regular.,F,cheese,,,['regular']
+688,9.0,36.0,CHI:        cheese.,L,cheese,,,
+689,9.0,36.0,"CHI:        well, cheese is so good.",L+I,cheese,,,['good']
+690,9.0,36.0,CHI:        I love mouse cheese.,I+T,cheese,,,
+691,9.0,36.0,CHI:        and it's good.,I,cheese,,,['good']
+692,9.0,36.0,CHI:        and I like it.,I,cheese,,,
+693,9.0,36.0,CHI:        well you know what?,,cheese,,,
+694,9.0,36.0,CHI:        you need to learn to eat cheese on your eye.,I+F+L,cheese,,,
+695,24.0,12.0,CHI:        make macaroni and cheese with it.,F+T,cheese,,,
+696,24.0,12.0,CHI:        and make sandwiches.,F+T,cheese,,,
+697,24.0,12.0,CHI:        cheese.,L,cheese,,,
+698,24.0,12.0,CHI:        mouse eat cheese and make holes.,F+P+L,cheese,,,
+699,24.0,12.0,CHI:        get groceries from cheese.,F+T+L,cheese,,,
+700,24.0,12.0,"CHI:        and, you eat cheese.",F+L,cheese,,,
+701,24.0,12.0,CHI:        birds eat cheese.,F+L,cheese,,,
+702,24.0,12.0,CHI:        mouse eat cheese.,F+L,cheese,,,
+703,30.0,59.0,CHI:        cheese that mice like.,F+L,cheese,,,
+704,30.0,59.0,CHI:        cheese that mice like.,,cheese,,,
+705,,,,,,,,
+706,6.0,29.0,CHI: cereal.,L,cereal,,,
+707,6.0,29.0,"CHI: last night I went to my school and I, Firstname wanted those (ex)cept I had different ones so.",I,cereal,,,"['last', 'ex)cept', 'different']"
+708,6.0,29.0,CHI: he wanted look he wanted to have some but instead of having those ones he wanted some the ones my other friend was having.,I,cereal,,,['other']
+709,6.0,29.0,"CHI: mm, then Firstname like and then I look down and say hey who stealed my cereal xxx.",I+L,cereal,,,
+710,6.0,29.0,CHI: hey Firstname did you eat my cereal?,I+L+F,cereal,,,
+711,6.0,29.0,CHI: yes.,,cereal,,,
+712,6.0,29.0,CHI: and he said he ate it.,I+F,cereal,,,
+713,6.0,29.0,CHI: cereal.,L,cereal,,,
+714,6.0,29.0,"CHI: last night I went to my school and I, First name wanted those except I had different ones so.",I,cereal,,,"['last', 'First', 'different']"
+715,6.0,29.0,CHI: he wanted look he wanted to have some but instead of having those ones he wanted some the ones my other friend was having.,I,cereal,,,['other']
+716,6.0,29.0,CHI: I look down and say hey who stealed my cereal.,I+L,cereal,,,
+717,6.0,29.0,CHI: did you eat my cereal?,I+L+F,cereal,,,
+718,6.0,29.0,CHI: yes.,,cereal,,,
+719,6.0,29.0,CHI: and he said he ate it.,I+F,cereal,,,
+720,8.0,30.0,CHI:        cereal.,L,cereal,,,
+721,8.0,30.0,CHI:        it's Total.,I,cereal,,,['Total']
+722,8.0,30.0,CHI:        my dad eats Total.,I+F,cereal,,,
+723,8.0,30.0,CHI:        it needs milk.,F,cereal,,,
+724,17.0,70.0,CHI:        this is cereal.,L,cereal,,,['cereal']
+725,17.0,70.0,CHI:        it has almond in it.,P,cereal,,,
+726,18.0,63.0,CHI:        cereal.,L,cereal,,,
+727,18.0,63.0,CHI:        it doesn't have milk in it.,F+P,cereal,,,
+728,18.0,63.0,CHI:        or maybe it's just maybe there's too much cereal and it's blocking it.,I+P+L,cereal,,,['much']
+729,18.0,63.0,CHI:        it's in a bowl.,P,cereal,,,
+730,20.0,3.0,"CHI:        cereal we eat it but, but cereal, you always have to put it in a bowl.",F+P+L,cereal,,,
+731,20.0,3.0,"CHI:        and, and you don't always have to eat it with milk.",F,cereal,,,
+732,20.0,3.0,"CHI:        and you gotta, and when you eat it with milk eat it with a spoon.",F,cereal,,,
+733,20.0,3.0,CHI:        when it's dry you can do it with your hands or a spoon.,F,cereal,,,['dry']
+734,27.0,31.0,CHI:        cereal.,L,cereal,,,
+735,27.0,31.0,CHI:        it is healthy.,I,cereal,,,['healthy']
+736,27.0,31.0,CHI:        it is yummy.,I+P,cereal,,,['yummy']
+737,27.0,31.0,CHI:        cereal.,L,cereal,,,
+738,27.0,31.0,CHI:        could you put milk in it.,F+T,cereal,,,
+739,27.0,31.0,CHI:        and it's yummy.,I+P,cereal,,,['yummy']
+740,,,,,,,,
+741,10.0,39.0,CHI:        well I know a little bit about corn.,L,corn,,,['little']
+742,10.0,39.0,"CHI:        well you see these are so, these are so it stays fresh and clean during when.",F,corn,,,"['fresh', 'clean']"
+743,10.0,39.0,CHI:        during when you pull it off like.,F,corn,,,
+744,10.0,39.0,CHI:        that's all.,,corn,,,
+745,10.0,39.0,CHI:        well you see these grow inside the corn.,P+L,corn,,,
+746,10.0,39.0,CHI:        and like they come out the yellow parts.,P,corn,,,['yellow']
+747,11.0,38.0,CHI:        corn.,L,corn,,,
+748,11.0,38.0,CHI:        it looks doesn't look like really corn.,P+L,corn,,,
+749,14.0,55.0,CHI:        corn.,L,corn,,,
+750,14.0,55.0,CHI:        it has different colors on the cob part.,P,corn,,,['different']
+751,14.0,55.0,CHI:        you you eat the color part off.,F,corn,,,['color']
+752,14.0,55.0,CHI:        and it grows in the field.,F,corn,,,
+753,14.0,55.0,CHI:        and it's in a farm.,F,corn,,,
+754,15.0,61.0,CHI:        indian corn is for Indians.,F+L,corn,,,['indian']
+755,15.0,61.0,CHI:        Indian Corn once we were making foods for the birds and,I+L,corn,,,
+756,15.0,61.0,CHI:        and we had Indian corn and plain corn.,I+L,corn,,,"['Indian', 'plain']"
+757,15.0,61.0,CHI:        but plain corn was easier because then you could just kinda pull,I+T,corn,,,"['plain', 'easier']"
+758,15.0,61.0,"CHI:        and then some, and it if wasn't you could just pick it off with a",I,corn,,,
+759,15.0,61.0,CHI:        yeah but the Indian corn was the hardest because of these lines.,I+L,corn,,,"['Indian', 'hardest']"
+760,15.0,61.0,CHI:        because they were some getting in the way some.,I,corn,,,
+761,15.0,61.0,CHI:        and Indian corn is much the same color as our corn but it has,L+T+P,corn,,,"['Indian', 'same']"
+762,15.0,61.0,CHI:        look at this one.,,corn,,,
+763,15.0,61.0,CHI:        see it's all different colors?,P,corn,,,['different']
+764,15.0,61.0,"CHI:        that's pretty neat about, that's what's neat about Indian corn.",I+L,corn,,,"['neat', 'neat', 'Indian']"
+765,15.0,61.0,CHI:        and Indian corn is about this long because of these up here.,P+L,corn,,,"['Indian', 'long']"
+766,15.0,61.0,CHI:        kind of like this big.,P,corn,,,['big']
+767,15.0,61.0,"CHI:        and like, I'm trying to think of what else I know.",I,corn,,,
+768,15.0,61.0,"CHI:        indians corn they do not, Indian corn you can never cut this off the top.",F+L,corn,,,['Indian']
+769,15.0,61.0,CHI:        that will kill the Indian corn.,F+L,corn,,,['Indian']
+770,15.0,61.0,CHI:        and then it won't taste so well.,I,corn,,,
+771,15.0,61.0,CHI:        but if you chop down an Indian corn tree it will never grow again.,F+L,corn,,,['Indian']
+772,16.0,56.0,CHI:        corn.,L,corn,,,
+773,16.0,56.0,CHI:        you eat corn on Thanksgiving.,F+L,corn,,,
+774,16.0,56.0,"CHI:        and corn muffins, that's what we had today at preschool.",I+L+T,corn,,,
+775,16.0,56.0,"CHI:        no that's all I know, about corn.",I+L,corn,,,
+776,25.0,16.0,CHI:        I don't know about corn.,I+L,corn,,,
+777,25.0,16.0,CHI:        corn is very a delicious treat.,I+T+P+L,corn,,,['delicious']
+778,25.0,16.0,CHI:        it's yummy and its and and and it it can make you full.,I+P+F,corn,,,"['yummy', 'full']"
+779,25.0,16.0,CHI:        I think that's all about corn.,I+L,corn,,,
+780,26.0,27.0,CHI:        this is corn that Indians use right?,F+L,corn,,,['right']
+781,26.0,27.0,CHI:        that used to use.,F,corn,,,
+782,26.0,27.0,"CHI:        but now, they use regular kind of corn.",F+T+L,corn,,,['regular']
+783,26.0,27.0,CHI:        like Ann Arbor corn right?,T+L,corn,,,['right']
+784,26.0,27.0,"CHI:        and, but they still have those red and black, things.",P+T,corn,,,"['red', 'black']"
+785,26.0,27.0,CHI:        and they have peel things except they're not real long.,P,corn,,,['peel']
+786,28.0,37.0,"CHI:        you know, they farmers own cornfields.",F+L,corn,,,
+787,28.0,37.0,CHI:        corn.,L,corn,,,
+788,28.0,37.0,CHI:        this a corn?,L,corn,,,
+789,28.0,37.0,CHI:        it looks is it a dead corn?,P+L,corn,,,['dead']
+790,28.0,37.0,CHI:        corn sometimes look like this?,P+L,corn,,,
+791,,,,,,,,
+792,10.0,39.0,CHI:        a pretzel it looks like a shadow.,L+T,pretzel,,,
+793,11.0,38.0,CHI:        I don't know hardly anything about pretzels.,I+L,pretzel,,,
+794,11.0,38.0,CHI:        it's twisty.,P,pretzel,,,['twisty']
+795,14.0,55.0,CHI:        pretzel.,L,pretzel,,,
+796,14.0,55.0,CHI:        you you eat it.,F,pretzel,,,
+797,14.0,55.0,CHI:        and it has sugary stuff in.,P,pretzel,,,['sugary']
+798,14.0,55.0,CHI:        and it's colored.,P,pretzel,,,
+799,14.0,55.0,CHI:        it has holes.,P,pretzel,,,
+800,15.0,61.0,CHI:        a big pretzel.,P+L,pretzel,,,['big']
+801,15.0,61.0,CHI:        kind of tied up.,P,pretzel,,,
+802,15.0,61.0,CHI:        it has these of little points.,P,pretzel,,,['little']
+803,15.0,61.0,CHI:        and you can eat.,F,pretzel,,,
+804,16.0,56.0,CHI:        a pretzel.,L,pretzel,,,
+805,16.0,56.0,CHI:        the only thing I know about pretzels is that you eat them.,F+L,pretzel,,,['only']
+806,16.0,56.0,"CHI:        no I just, that's the only thing I know about pretzels.",I+L,pretzel,,,['only']
+807,25.0,16.0,CHI:        a pretzel.,L,pretzel,,,
+808,25.0,16.0,CHI:        I don't know what what about pretzels.,I+L,pretzel,,,
+809,25.0,16.0,CHI:        they're good to eat and they're so and they're healthy for you.,F+I+P,pretzel,,,"['good', 'healthy']"
+810,25.0,16.0,"CHI:        and, I'm trying my best.",,pretzel,,,['best']
+811,25.0,16.0,CHI:        and and they're also and they also taste good.,I+P,pretzel,,,['good']
+812,25.0,16.0,CHI:        they taste very crispy.,P,pretzel,,,
+813,25.0,16.0,CHI:        have you ever had a pretzel ?,F+L,pretzel,,,
+814,25.0,16.0,CHI:        it's cute.,I,pretzel,,,['cute']
+815,25.0,16.0,CHI:         likes pretzels.,I+L,pretzel,,,
+816,25.0,16.0,CHI:        it looks good to eat.,I+P+F,pretzel,,,['good']
+817,25.0,16.0,CHI:        and look at all those sesame seeds.,P,pretzel,,,['sesame']
+818,25.0,16.0,CHI:        look at those sesame seeds.,,pretzel,,,['sesame']
+819,25.0,16.0,CHI:         sesame seeds are are are crispier than ants.,P+T,pretzel,,,"['sesame', 'crispier']"
+820,25.0,16.0,CHI:        you know that don't you?,I,pretzel,,,
+821,25.0,16.0,CHI:        are ants good?,I+T,pretzel,,,['good']
+822,25.0,16.0,CHI:        well pretzels are good.,I+L,pretzel,,,['good']
+823,25.0,16.0,CHI:        likes them my dog.,I,pretzel,,,
+824,25.0,16.0,CHI:        is a very is a very big dog .,,pretzel,,,['big']
+825,25.0,16.0,CHI:        you could get you could get stepped on.,,pretzel,,,
+826,25.0,16.0,CHI:        it's a big dog you know and you know it.,,pretzel,,,['big']
+827,25.0,16.0,CHI:        I think that's all about pretzels.,I+L,pretzel,,,
+828,,,,,,,,
+829,6.0,29.0,CHI: broccoli.,L,broccoli,,,
+830,6.0,29.0,CHI: last time I ate broccoli except I didn't really feel good so I just went to bed.,I+L+F,broccoli,,,"['last', 'good']"
+831,8.0,30.0,CHI:        broccoli.,L,broccoli,,,
+832,8.0,30.0,CHI:        you eat it.,F,broccoli,,,
+833,18.0,63.0,CHI:        broccoli.,L,broccoli,,,
+834,18.0,63.0,CHI:        it's a vegetable.,T,broccoli,,,
+835,18.0,63.0,CHI:        and it's almost I call it with with when when it's big and it has these little boingies on it I call it a tree.,P+T+I,broccoli,,,"['big', 'little']"
+836,18.0,63.0,CHI:        you can eat them.,F,broccoli,,,
+837,18.0,63.0,CHI:        you can eat it.,F,broccoli,,,
+838,18.0,63.0,CHI:        and even though it it is good for you.,P,broccoli,,,['good']
+839,20.0,3.0,CHI:        broccoli.,L,broccoli,,,
+840,20.0,3.0,CHI:        I know about broccoli you eat it but I don't like broccoli.,F+I+L,broccoli,,,
+841,20.0,3.0,CHI:        broccoli.,L,broccoli,,,
+842,20.0,3.0,CHI:        you eat it and I don't like broccoli.,F+I+L,broccoli,,,
+843,20.0,3.0,CHI:        but other people like it.,I,broccoli,,,['other']
+844,20.0,3.0,CHI:        some people.,,broccoli,,,
+845,20.0,3.0,CHI:        daddy doesn't like broccoli either.,I+L,broccoli,,,
+846,20.0,3.0,CHI:        but but daddy he's big enough to touch the ceiling.,,broccoli,,,['big']
+847,20.0,3.0,CHI:        really is.,,broccoli,,,
+848,20.0,3.0,"CHI:        but, there's something on the garage and it's a shelf and and it's a shelf.",,broccoli,,,
+849,20.0,3.0,"CHI:        there's lots of shelves all the way up to the ceiling and daddy can reach and you can put things, in top of the shelf and daddy can reach the things that are on top of that shelf.",,broccoli,,,
+850,20.0,3.0,CHI:        and all the way up to the ceiling.,,broccoli,,,
+851,20.0,3.0,CHI:        when I was telling it to you he could hear it.,,broccoli,,,
+852,20.0,3.0,CHI:        that's all I know about broccoli actually.,I+L,broccoli,,,
+853,20.0,3.0,CHI:        that's all I know about it.,,broccoli,,,
+854,20.0,3.0,CHI:        but dad but dad is but dad actually is all about broccoli.,I+L,broccoli,,,
+855,21.0,4.0,CHI:        broccoli what you eat on your plate.,F+L,broccoli,,,
+856,21.0,4.0,CHI:        I think you take water and milk with it on your plate.,F+T,broccoli,,,
+857,21.0,4.0,CHI:        what if you ate only broccoli for dinner.,I+F+L,broccoli,,,
+858,27.0,31.0,CHI:        broccoli.,L,broccoli,,,
+859,27.0,31.0,"CHI:        it's, healthy.",P,broccoli,,,['healthy']
+860,27.0,31.0,CHI:        it is yummy.,I+P,broccoli,,,['yummy']
+861,27.0,31.0,"CHI:        and I know one more, which I don't remember.",I,broccoli,,,['more']
+862,27.0,31.0,CHI:        it has Vitamin_C.,P,broccoli,,,
+863,27.0,31.0,CHI:        my mom oh my mom told me that anything that's green has Vitamin_C in it.,I+P,broccoli,,,['green']
