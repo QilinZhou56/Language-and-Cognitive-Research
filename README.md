@@ -5,7 +5,7 @@ This project, supervised by Dr. Catherine Sandhofer and led by graduate student 
 
 ## Team Members
 - Dr. Catherine Sandhofer (Supervisor)
-- Erjing Zhang (Graduate Student)
+- Erjing Zhang
 - Qilin Zhou
 - Shalmalee Joshi
 
@@ -24,7 +24,7 @@ Our findings reveal interesting patterns in the use of adjectives by four-year-o
 - There was a larger variety of adjectives used for food referents compared to human referents, indicating a protracted process in adjective usage relative to noun acquisition.
 
 ## Cross-Validation
-We extended our research by conducting cross-validation with other linguistic transcripts. This further established Spacy as a robust tool for identifying parts of speech and analyzing language patterns in young children.
+We extended our research by conducting cross-validation with other linguistic transcripts. This further established Spacy as a robust tool for identifying parts of speech and analyzing language patterns in young children, with consistent 90% accuracy.
 
 ## Conclusion
 Our project contributes to understanding how children's language and cognitive abilities develop, particularly in the context of adjective usage in descriptive tasks. These insights can be crucial for further research in developmental psychology and linguistics.
