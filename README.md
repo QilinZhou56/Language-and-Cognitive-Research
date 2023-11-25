@@ -14,7 +14,7 @@ We analyzed 33 transcripts from the CHILDES database, specifically from Gelman's
 
 ## Methodology
 Our approach involved two primary tools:
-- **Spacy**: For text mining, specifically focusing on the use of adjectives for each referent in the pictures.
+- **Spacy**: For text mining, specifically focusing on the use of adjectives for each referent in the pictures, including n-grams analysis for adjectives and nouns.
 - **Pyvis**: To visualize the associations between adjectives and different types of referents (e.g., social, food, animals).
 
 ## Findings
