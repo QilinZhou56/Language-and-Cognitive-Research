@@ -17,6 +17,9 @@ Our approach involved two primary tools:
 - **Spacy**: For text mining, specifically focusing on the use of adjectives for each referent in the pictures, including n-grams analysis for adjectives and nouns.
 - **Pyvis**: To visualize the associations between adjectives and different types of referents (e.g., social, food, animals).
 
+## Sample Visualization
+<iframe src="Referential Communication/Result/food_adj_referent.html" width="100%" height="500px"></iframe>
+
 ## Findings
 Our findings reveal interesting patterns in the use of adjectives by four-year-old children:
 - For food referents, children commonly used color, size, and taste adjectives, while quality or functional adjectives were less frequent.
