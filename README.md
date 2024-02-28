@@ -18,7 +18,7 @@ Our approach involved two primary tools:
 - **Pyvis**: To visualize the associations between adjectives and different types of referents (e.g., social, food, animals).
 
 ## Sample Visualization
-[View Visualization](ReferentialCommunication/Result/food_adj_referent.html)
+[View Visualization](referential_communication/Result/food_adj_referent.html)
 
 ## Findings
 Our findings reveal interesting patterns in the use of adjectives by four-year-old children:
