@@ -29,5 +29,5 @@ We extended our research by conducting cross-validation with other linguistic tr
 ## Conclusion
 Our project contributes to understanding how children's language and cognitive abilities develop, particularly in the context of adjective usage in descriptive tasks. These insights can be crucial for further research in developmental psychology and linguistics.
 
-## Acknowledgments
-We would like to thank all contributors and participants involved in this research project.
+## Acknowledgments and Confidentiality
+We would like to thank all contributors and participants involved in this research project. The two sample data, if used, should inform us for research confidentiality purposes.
