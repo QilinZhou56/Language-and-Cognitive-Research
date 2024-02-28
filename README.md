@@ -14,11 +14,14 @@ We analyzed 33 transcripts from the CHILDES database, specifically from Gelman's
 
 ## Methodology
 Our approach involved two primary tools:
-- **Spacy**: For text mining, specifically focusing on the use of adjectives for each referent in the pictures, including n-grams analysis for adjectives and nouns.
+- **spaCy**: For text mining, specifically focusing on the use of adjectives for each referent in the pictures, including n-grams analysis for adjectives and nouns.
 - **Pyvis**: To visualize the associations between adjectives and different types of referents (e.g., social, food, animals).
 
 ## Sample Visualization
-
+- [Adjs Across Categories by spaCy](https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/general_adj_freq_Spacy.png)
+- [N_grams](https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/n_grams_viz.png)
+- [Food Adjs Frequency](https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/food_adj_freq.png)
+  
 [View Pair-wise Association](https://htmlpreview.github.io/?https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/food_adj_referent.html)
 
 If not worked properly, you could reference [HTML](https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/food_adj_referent.html)
@@ -30,7 +33,7 @@ Our findings reveal interesting patterns in the use of adjectives by four-year-o
 - There was a larger variety of adjectives used for food referents compared to human referents, indicating a protracted process in adjective usage relative to noun acquisition.
 
 ## Cross-Validation
-We extended our research by conducting cross-validation with other linguistic transcripts. This further established Spacy as a robust tool for identifying parts of speech and analyzing language patterns in young children, with consistent 90% accuracy.
+We extended our research by conducting cross-validation with other linguistic transcripts. This further established spaCy as a robust tool for identifying parts of speech and analyzing language patterns in young children, with consistent 90% baseline accuracy. We will continue improving this model with modification regarding dependency and classification threshold.
 
 ## Conclusion
 Our project contributes to understanding how children's language and cognitive abilities develop, particularly in the context of adjective usage in descriptive tasks. These insights can be crucial for further research in developmental psychology and linguistics.
