@@ -19,7 +19,7 @@ Our approach involved two primary tools:
 
 ## Sample Visualization
 
-[View Pair-wise Association](https://qilinzhou56.github.io?/Language-and-Cognitive-Research/referential_communication/Result/food_adj_referent.html)
+[View Pair-wise Association](https://htmlpreview.github.io/?https://qilinzhou56.github.io/Language-and-Cognitive-Research/referential_communication/Result/food_adj_referent.html)
 
 ## Findings
 Our findings reveal interesting patterns in the use of adjectives by four-year-old children:
