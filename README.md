@@ -33,7 +33,8 @@ Our findings reveal interesting patterns in the use of adjectives by four-year-o
 - There was a larger variety of adjectives used for food referents compared to human referents, indicating a protracted process in adjective usage relative to noun acquisition.
 
 ## Cross-Validation
-We extended our research by conducting cross-validation with other linguistic transcripts. This further established spaCy as a robust tool for identifying parts of speech and analyzing language patterns in young children, with consistent 90% baseline accuracy. We will continue improving this model with modification regarding dependency and classification threshold.
+1. We extended our research by conducting cross-validation with other linguistic transcripts. This further established spaCy as a robust tool for identifying parts of speech and analyzing language patterns in young children, with consistent 90% **baseline** accuracy. 
+2. We will **continue improving** this model with modification regarding dependency and classification threshold.
 
 ## Conclusion
 Our project contributes to understanding how children's language and cognitive abilities develop, particularly in the context of adjective usage in descriptive tasks. These insights can be crucial for further research in developmental psychology and linguistics.
