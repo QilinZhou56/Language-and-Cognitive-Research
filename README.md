@@ -28,9 +28,9 @@ If not worked properly, you could reference [HTML](https://github.com/QilinZhou5
 
 ## Findings
 Our findings reveal interesting patterns in the use of adjectives by four-year-old children:
-- For food referents, children commonly used color, size, and taste adjectives, while quality or functional adjectives were less frequent.
-- In describing human referents, children focused more on perceptual features and less on inherent qualities like "alive", "good", or "kind".
-- There was a larger variety of adjectives used for food referents compared to human referents, indicating a protracted process in adjective usage relative to noun acquisition.
+- For food referents, children commonly used color, size, and taste adjectives, while **quality or functional adjectives were less frequent**.
+- In describing human referents, children focused more on perceptual features and **less on inherent qualities like "alive", "good", or "kind"**.
+- There was a larger variety of adjectives used for food referents compared to human referents, indicating a **protracted process in adjective usage** relative to noun acquisition.
 
 ## Cross-Validation
 1. We extended our research by conducting cross-validation with other linguistic transcripts. This further established spaCy as a robust tool for identifying parts of speech and analyzing language patterns in young children, with consistent 90% **baseline** accuracy. 
