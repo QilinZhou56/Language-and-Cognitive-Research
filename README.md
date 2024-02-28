@@ -21,6 +21,8 @@ Our approach involved two primary tools:
 
 [View Pair-wise Association](https://htmlpreview.github.io/?https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/food_adj_referent.html)
 
+If not worked properly, you could reference [HTML](https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/food_adj_referent.html)
+
 ## Findings
 Our findings reveal interesting patterns in the use of adjectives by four-year-old children:
 - For food referents, children commonly used color, size, and taste adjectives, while quality or functional adjectives were less frequent.
