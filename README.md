@@ -34,20 +34,20 @@ We only show C-R transcripts here for 33 children, but there are more in our Goo
   
 
 ## Text Mining Methodology
-**1)** spaCy Parsing to get referent-adj dictionary
+**1) spaCy Parsing to get referent-adj dictionary**
 - **spaCy**: For text mining, specifically focusing on the use of adjectives for each referent in the pictures, including n-grams analysis for adjectives and nouns. In SpaCy, a Transformer (TRF) model leverages a neural network architecture that has been pre-trained on a large corpus of text using self-attention mechanisms. Hence, we use spacy.load("en_core_web_trf").
 
-**2)** N-distance analysis for adj-noun pairs
+**2) N-distance analysis for adj-noun pairs**
 - **bigram within a specified distance**: Although we have parsed adjectives here for each referent, the adjectives do not necessarily relate to the referent directly. Hence, we add this supplementary N-distance analysis to see more directly-related adj-noun pairs.
 
 For example, in the instance where the child describes the surfer, one phrase used is "and um when it's really hot in the summer." Here, "hot" serves as an adjective that the child uses to characterize the ideal weather for surfing, rather than directly describing the surfer.
 
-**3)** PCA TF-IDF Analysis
+**3) PCA TF-IDF Analysis**
 - **TF-IDF (Term Frequency-Inverse Document Frequency)**: This metric quantifies the relevance of a term within an individual document in comparison to a collection of documents. In our analysis, a "document" refers to all utterances grouped by a child's participant ID within a specific category (social, food, animals) from a comprehensive compilation of children's speech. Therefore, TF-IDF measures the significance of an adjective in a child's description relative to the adjective usage across all children, highlighting unique or distinctive adjective usage by individual children.
   
-- **PCA (Principal Component Analysis) with 2 Components**:  By applying PCA to the TF-IDF matrix and reducing it to two components, we simplify the complex data while retaining significant patterns. In this visualization, proximity between points indicates that children have similar adjective usage profiles in the TF-IDF space. This suggests that these children might exhibit common patterns in their descriptions of a certain type of referent, indicating shared strategies or similarities in how they perceive and articulate characteristics of social entities, foods, and animals. We have also add K-Means Clustering as an optional feature.
-- 
-**4)** Network Visualization
+- **PCA (Principal Component Analysis) with 2 Components**:  By applying PCA to the TF-IDF matrix and reducing it to two components, we simplify the complex data while retaining significant patterns. In this visualization, proximity between points indicates that children have similar adjective usage profiles in the TF-IDF space. This suggests that these children might exhibit common patterns in their descriptions of a certain type of referent, indicating shared strategies or similarities in how they perceive and articulate characteristics of social entities, foods, and animals. We have also add K-Means Clustering as an optional plotting feature.
+  
+**4) Network Visualization**
 - **Pyvis**: To visualize the associations between adjectives and different types of referents (i.e., social, food, animals).
 
 
