@@ -58,12 +58,12 @@ For example, in the instance where the child describes the surfer, one phrase us
 </p>
 
 <p align="center">
-  <b>N-grams</b>
+  <b>Top_10 Adjectives For Social Referents</b>
   <img src="https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/top_10_social.png" alt="N_grams"><br>
 </p>
 
 <p align="center">
-  <b>Food Adjectives Frequency</b>
+  <b>Top_10 Bigrams For Social Referents</b>
   <img src="https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/top_10_bigram_social.png" alt="Food Adjs Frequency"><br>
 </p>
 
