@@ -53,7 +53,7 @@ For example, in the instance where the child describes the surfer, one phrase us
 
 ## Sample Visualization
 <p align="center">
-  <b>Adjectives Across Categories by spaCy</b>
+  <b>Adjective Frequency For Weightlifter by spaCy</b>
   <img src="https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/adj_freq_weightlifter.plot.png" alt="Adjs Across Categories by spaCy"><br>
 </p>
 
