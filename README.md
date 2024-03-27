@@ -34,15 +34,15 @@ We only show C-R transcripts here for 33 children, but there are more in our Goo
   
 
 ## Text Mining Methodology
-1) spaCy Parsing to get referent-adj dictionary
+**1)** spaCy Parsing to get referent-adj dictionary
 - **spaCy**: For text mining, specifically focusing on the use of adjectives for each referent in the pictures, including n-grams analysis for adjectives and nouns. In SpaCy, a Transformer (TRF) model leverages a neural network architecture that has been pre-trained on a large corpus of text using self-attention mechanisms. Hence, we use spacy.load("en_core_web_trf").
 
-2) N-distance analysis for adj-noun pairs
+**2)** N-distance analysis for adj-noun pairs
 - **bigram within a specified distance**: Although we have parsed adjectives here for each referent, the adjectives do not necessarily relate to the referent directly. Hence, we add this supplementary N-distance analysis to see more directly-related adj-noun pairs.
 
 For example, in the instance where the child describes the surfer, one phrase used is "and um when it's really hot in the summer." Here, "hot" serves as an adjective that the child uses to characterize the ideal weather for surfing, rather than directly describing the surfer.
 
-3) Network Visualization
+**3)** Network Visualization
 - **Pyvis**: To visualize the associations between adjectives and different types of referents (e.g., social, food, animals).
 
 
