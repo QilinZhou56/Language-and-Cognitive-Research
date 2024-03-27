@@ -48,9 +48,7 @@ For example, in the instance where the child describes the surfer, one phrase us
 - **PCA (Principal Component Analysis) with 2 Components**:  By applying PCA to the TF-IDF matrix and reducing it to two components, we simplify the complex data while retaining significant patterns. In this visualization, proximity between points indicates that children have similar adjective usage profiles in the TF-IDF space. This suggests that these children might exhibit common patterns in their descriptions of a certain type of referent, indicating shared strategies or similarities in how they perceive and articulate characteristics of social entities, foods, and animals. We have also add K-Means Clustering as an optional plotting feature.
   
 **4) Network Visualization**
-- **Pyvis**: To visualize the associations between adjectives and different types of referents (i.e., social, food, animals).
-
-
+- **Pyvis**: To visualize the network associations between adjectives and different types of referents (i.e., social, food, animals).
 
 ## Sample Visualization
 - ![Adjs Across Categories by spaCy](https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/general_adj_freq_Spacy.png)
