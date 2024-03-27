@@ -90,6 +90,18 @@ Our findings reveal interesting patterns in the use of adjectives by four-year-o
 - In the context of animal referents, the range of adjectives used is notably broad and vibrant, encompassing intrinsic traits like "afraid," situational adjectives such as "giddy," and a multitude of perceptual adjectives. This diversity reflects the multifaceted ways in which children observe and describe animals, capturing their behaviors, emotions, physical characteristics, and even responses to various situations.
 - There was a larger variety of adjectives used for animal referents compared to food and human referents, indicating a **protracted process in adjective usage** relative to noun acquisition.'
 3) PCA TF-IDF analysis:
+<p align="center">
+  <b>standardized_PCA_social</b>
+  <img src="https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/standardized_PCA_social.png" alt="standardized_PCA_social"><br>
+</p>
+<p align="center">
+  <b>standardized_PCA_food</b>
+  <img src="https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/standardized_PCA_food.png" alt="standardized_PCA_food"><br>
+</p>
+<p align="center">
+  <b>standardized_PCA__animal</b>
+  <img src="https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/standardized_PCA__animal.png" alt="standardized_PCA__animal"><br>
+</p>
 The observation that points in the PCA TF-IDF plot for social referents are much sparser compared to those in the animal and food plots implies that four-year-old children exhibit more uniform adjective usage patterns when discussing animal and food referents. **Conversely, the variation in how they describe human referents suggests a divergent trajectory in adjective acquisition.** This divergence might indicate that children's experiences with, perceptions of, and the complexity involved in describing human characteristics are more varied than those related to animals and food, leading to a broader spectrum of descriptive language use.
 
 ## Cross-Validation
