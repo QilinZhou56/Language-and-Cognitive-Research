@@ -14,7 +14,7 @@ We analyzed 33 counterbalanced transcripts from the CHILDES database, specifical
 
 Participants included children, aged between 3 years and 9 months to 4 years and 11 months (average age 4 years and 4 months), along with their parents, totaling 72 child-parent pairs. Each pair participated in recordings of their interactions, as well as interactions between each individual and a researcher, during two laboratory visits spaced three to four weeks apart. Consequently, each pair contributed to six distinct interaction scenarios: Child-Parent for the first visit (C-P1), Child-Parent for the second visit (C-P2), Child-Researcher for the first visit (C-R1), Child-Researcher for the second visit (C-R2), Parent-Researcher for the first visit (P-R1), and Parent-Researcher for the second visit (P-R2). During these interactions, participants engaged with a 15-page picture book without text, which featured an equal distribution of images depicting animals, foods, and humans.
 
-We only show C-R transcripts for 33 children.
+We only show C-R transcripts here for 33 children, but there are more in our Google Drive database.
 - [Project Description for 2014 - Individual Differences Project](https://childes.talkbank.org/access/Eng-NA/Gelman.html)
 <p align="center">
   <img src="king.png" width="400"><br>
@@ -38,8 +38,11 @@ We only show C-R transcripts for 33 children.
 - **spaCy**: For text mining, specifically focusing on the use of adjectives for each referent in the pictures, including n-grams analysis for adjectives and nouns. In SpaCy, a Transformer (TRF) model leverages a neural network architecture that has been pre-trained on a large corpus of text using self-attention mechanisms. Hence, we use spacy.load("en_core_web_trf").
 
 2) N-distance analysis for adj-noun pairs
-- **bigram within a specified distance**: Although 
-2) Network Visualization
+- **bigram within a specified distance**: Although we have parsed adjectives here for each referent, the adjectives do not necessarily relate to the referent directly. Hence, we add this supplementary N-distance analysis to see more directly-related adj-noun pairs.
+
+For example, in the instance where the child describes the surfer, one phrase used is "and um when it's really hot in the summer." Here, "hot" serves as an adjective that the child uses to characterize the ideal weather for surfing, rather than directly describing the surfer.
+
+3) Network Visualization
 - **Pyvis**: To visualize the associations between adjectives and different types of referents (e.g., social, food, animals).
 
 
