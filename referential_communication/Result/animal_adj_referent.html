@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 750px;
+                 background-color: #222222;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "font": {"color": "white"}, "id": "alligator", "label": "alligator", "shape": "dot", "title": "alligator Neighbors: big, last, bad, sure, sharp", "value": 5}, {"color": "pink", "font": {"color": "white"}, "id": "bad", "label": "bad", "shape": "dot", "title": "bad Neighbors: skunk, pig, alligator", "value": 3}, {"color": "pink", "font": {"color": "white"}, "id": "big", "label": "big", "shape": "dot", "title": "big Neighbors: elephant, alligator, lobster, snake, ladybug, pig, turtle", "value": 7}, {"color": "pink", "font": {"color": "white"}, "id": "last", "label": "last", "shape": "dot", "title": "last Neighbors: horse, elephant, alligator, pig, lobster, penguin", "value": 6}, {"color": "pink", "font": {"color": "white"}, "id": "sharp", "label": "sharp", "shape": "dot", "title": "sharp Neighbors: skunk, turtle, parrot, alligator", "value": 4}, {"color": "pink", "font": {"color": "white"}, "id": "sure", "label": "sure", "shape": "dot", "title": "sure Neighbors: turtle, alligator, ladybug", "value": 3}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "butterfly", "label": "butterfly", "shape": "dot", "title": "butterfly Neighbors: stuffed, different", "value": 2}, {"color": "pink", "font": {"color": "white"}, "id": "different", "label": "different", "shape": "dot", "title": "different Neighbors: cat, ladybug, snake, butterfly", "value": 4}, {"color": "pink", "font": {"color": "white"}, "id": "stuffed", "label": "stuffed", "shape": "dot", "title": "stuffed Neighbors: butterfly", "value": 1}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "cat", "label": "cat", "shape": "dot", "title": "cat Neighbors: furry, other, strong, half, royal, special, sensitive, magic, new, different, same, soft", "value": 12}, {"color": "pink", "font": {"color": "white"}, "id": "furry", "label": "furry", "shape": "dot", "title": "furry Neighbors: cat", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "half", "label": "half", "shape": "dot", "title": "half Neighbors: cat, frog, snake", "value": 3}, {"color": "pink", "font": {"color": "white"}, "id": "magic", "label": "magic", "shape": "dot", "title": "magic Neighbors: cat", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "new", "label": "new", "shape": "dot", "title": "new Neighbors: cat", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "other", "label": "other", "shape": "dot", "title": "other Neighbors: cat, dolphin, parrot", "value": 3}, {"color": "pink", "font": {"color": "white"}, "id": "royal", "label": "royal", "shape": "dot", "title": "royal Neighbors: cat", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "same", "label": "same", "shape": "dot", "title": "same Neighbors: cat, frog, snake", "value": 3}, {"color": "pink", "font": {"color": "white"}, "id": "sensitive", "label": "sensitive", "shape": "dot", "title": "sensitive Neighbors: cat", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "soft", "label": "soft", "shape": "dot", "title": "soft Neighbors: cat", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "special", "label": "special", "shape": "dot", "title": "special Neighbors: skunk, cat", "value": 2}, {"color": "pink", "font": {"color": "white"}, "id": "strong", "label": "strong", "shape": "dot", "title": "strong Neighbors: cat, pig", "value": 2}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "dolphin", "label": "dolphin", "shape": "dot", "title": "dolphin Neighbors: finished, other, next", "value": 3}, {"color": "pink", "font": {"color": "white"}, "id": "finished", "label": "finished", "shape": "dot", "title": "finished Neighbors: dolphin", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "next", "label": "next", "shape": "dot", "title": "next Neighbors: dolphin, lion, duck", "value": 3}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "duck", "label": "duck", "shape": "dot", "title": "duck Neighbors: next, good, kinda", "value": 3}, {"color": "pink", "font": {"color": "white"}, "id": "good", "label": "good", "shape": "dot", "title": "good Neighbors: pig, duck", "value": 2}, {"color": "pink", "font": {"color": "white"}, "id": "kinda", "label": "kinda", "shape": "dot", "title": "kinda Neighbors: duck", "value": 1}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "elephant", "label": "elephant", "shape": "dot", "title": "elephant Neighbors: long, last, funny, big", "value": 4}, {"color": "pink", "font": {"color": "white"}, "id": "funny", "label": "funny", "shape": "dot", "title": "funny Neighbors: owl, elephant, pig", "value": 3}, {"color": "pink", "font": {"color": "white"}, "id": "long", "label": "long", "shape": "dot", "title": "long Neighbors: horse, elephant, pig", "value": 3}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "frog", "label": "frog", "shape": "dot", "title": "frog Neighbors: back, same, white, half", "value": 4}, {"color": "pink", "font": {"color": "white"}, "id": "back", "label": "back", "shape": "dot", "title": "back Neighbors: frog", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "white", "label": "white", "shape": "dot", "title": "white Neighbors: skunk, frog, rabbit", "value": 3}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "horse", "label": "horse", "shape": "dot", "title": "horse Neighbors: giddy, careful, last, old, long", "value": 5}, {"color": "pink", "font": {"color": "white"}, "id": "careful", "label": "careful", "shape": "dot", "title": "careful Neighbors: horse", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "giddy", "label": "giddy", "shape": "dot", "title": "giddy Neighbors: horse", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "old", "label": "old", "shape": "dot", "title": "old Neighbors: horse", "value": 1}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "ladybug", "label": "ladybug", "shape": "dot", "title": "ladybug Neighbors: black, plain, big, red, sure, different, real", "value": 7}, {"color": "pink", "font": {"color": "white"}, "id": "black", "label": "black", "shape": "dot", "title": "black Neighbors: skunk, pig, ladybug", "value": 3}, {"color": "pink", "font": {"color": "white"}, "id": "plain", "label": "plain", "shape": "dot", "title": "plain Neighbors: ladybug", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "real", "label": "real", "shape": "dot", "title": "real Neighbors: ladybug", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "red", "label": "red", "shape": "dot", "title": "red Neighbors: owl, rabbit, ladybug", "value": 3}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "lion", "label": "lion", "shape": "dot", "title": "lion Neighbors: next, more, pointy", "value": 3}, {"color": "pink", "font": {"color": "white"}, "id": "more", "label": "more", "shape": "dot", "title": "more Neighbors: pig, penguin, lion", "value": 3}, {"color": "pink", "font": {"color": "white"}, "id": "pointy", "label": "pointy", "shape": "dot", "title": "pointy Neighbors: skunk, rabbit, parrot, lion", "value": 4}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "lobster", "label": "lobster", "shape": "dot", "title": "lobster Neighbors: last, small, much, big", "value": 4}, {"color": "pink", "font": {"color": "white"}, "id": "much", "label": "much", "shape": "dot", "title": "much Neighbors: puppy, lobster, turtle", "value": 3}, {"color": "pink", "font": {"color": "white"}, "id": "small", "label": "small", "shape": "dot", "title": "small Neighbors: lobster", "value": 1}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "owl", "label": "owl", "shape": "dot", "title": "owl Neighbors: gentle, kooky, fun, hot, funny, little, red", "value": 7}, {"color": "pink", "font": {"color": "white"}, "id": "fun", "label": "fun", "shape": "dot", "title": "fun Neighbors: owl", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "gentle", "label": "gentle", "shape": "dot", "title": "gentle Neighbors: owl", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "hot", "label": "hot", "shape": "dot", "title": "hot Neighbors: owl", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "kooky", "label": "kooky", "shape": "dot", "title": "kooky Neighbors: owl", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "little", "label": "little", "shape": "dot", "title": "little Neighbors: owl, snake, parrot, skunk", "value": 4}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "parrot", "label": "parrot", "shape": "dot", "title": "parrot Neighbors: hungry, other, blue, yellow, pointy, green, little, sharp, best", "value": 9}, {"color": "pink", "font": {"color": "white"}, "id": "best", "label": "best", "shape": "dot", "title": "best Neighbors: parrot, rabbit", "value": 2}, {"color": "pink", "font": {"color": "white"}, "id": "blue", "label": "blue", "shape": "dot", "title": "blue Neighbors: parrot, rabbit", "value": 2}, {"color": "pink", "font": {"color": "white"}, "id": "green", "label": "green", "shape": "dot", "title": "green Neighbors: parrot, pig, turtle", "value": 3}, {"color": "pink", "font": {"color": "white"}, "id": "hungry", "label": "hungry", "shape": "dot", "title": "hungry Neighbors: parrot", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "yellow", "label": "yellow", "shape": "dot", "title": "yellow Neighbors: parrot, rabbit", "value": 2}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "penguin", "label": "penguin", "shape": "dot", "title": "penguin Neighbors: okay, chilly, last, dark, cold, more", "value": 6}, {"color": "pink", "font": {"color": "white"}, "id": "chilly", "label": "chilly", "shape": "dot", "title": "chilly Neighbors: penguin", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "cold", "label": "cold", "shape": "dot", "title": "cold Neighbors: penguin", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "dark", "label": "dark", "shape": "dot", "title": "dark Neighbors: penguin", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "okay", "label": "okay", "shape": "dot", "title": "okay Neighbors: penguin", "value": 1}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "pig", "label": "pig", "shape": "dot", "title": "pig Neighbors: black, ceramic, gooey, good, strong, heavier, sick, big, green, last, bad, funny, pink, slimy, yucky, hard, more, long", "value": 18}, {"color": "pink", "font": {"color": "white"}, "id": "ceramic", "label": "ceramic", "shape": "dot", "title": "ceramic Neighbors: pig", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "gooey", "label": "gooey", "shape": "dot", "title": "gooey Neighbors: pig", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "hard", "label": "hard", "shape": "dot", "title": "hard Neighbors: pig", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "heavier", "label": "heavier", "shape": "dot", "title": "heavier Neighbors: pig", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "pink", "label": "pink", "shape": "dot", "title": "pink Neighbors: pig", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "sick", "label": "sick", "shape": "dot", "title": "sick Neighbors: pig", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "slimy", "label": "slimy", "shape": "dot", "title": "slimy Neighbors: pig", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "yucky", "label": "yucky", "shape": "dot", "title": "yucky Neighbors: pig", "value": 1}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "puppy", "label": "puppy", "shape": "dot", "title": "puppy Neighbors: much, pretty", "value": 2}, {"color": "pink", "font": {"color": "white"}, "id": "pretty", "label": "pretty", "shape": "dot", "title": "pretty Neighbors: puppy, turtle", "value": 2}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "rabbit", "label": "rabbit", "shape": "dot", "title": "rabbit Neighbors: white, close, blue, purple, yellow, pointy, red, nice, best", "value": 9}, {"color": "pink", "font": {"color": "white"}, "id": "close", "label": "close", "shape": "dot", "title": "close Neighbors: rabbit", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "nice", "label": "nice", "shape": "dot", "title": "nice Neighbors: rabbit", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "purple", "label": "purple", "shape": "dot", "title": "purple Neighbors: rabbit", "value": 1}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "skunk", "label": "skunk", "shape": "dot", "title": "skunk Neighbors: black, fuzzy, white, special, pointy, bad, little, sharp, light", "value": 9}, {"color": "pink", "font": {"color": "white"}, "id": "fuzzy", "label": "fuzzy", "shape": "dot", "title": "fuzzy Neighbors: skunk", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "light", "label": "light", "shape": "dot", "title": "light Neighbors: skunk", "value": 1}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "snake", "label": "snake", "shape": "dot", "title": "snake Neighbors: half, big, same, little, different, longer, alive", "value": 7}, {"color": "pink", "font": {"color": "white"}, "id": "alive", "label": "alive", "shape": "dot", "title": "alive Neighbors: snake", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "longer", "label": "longer", "shape": "dot", "title": "longer Neighbors: snake", "value": 1}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "turtle", "label": "turtle", "shape": "dot", "title": "turtle Neighbors: slow, much, huge, green, big, right, whole, deep, sure, afraid, sharp, pretty", "value": 12}, {"color": "pink", "font": {"color": "white"}, "id": "afraid", "label": "afraid", "shape": "dot", "title": "afraid Neighbors: turtle", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "deep", "label": "deep", "shape": "dot", "title": "deep Neighbors: turtle", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "huge", "label": "huge", "shape": "dot", "title": "huge Neighbors: turtle", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "right", "label": "right", "shape": "dot", "title": "right Neighbors: turtle", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "slow", "label": "slow", "shape": "dot", "title": "slow Neighbors: turtle", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "whole", "label": "whole", "shape": "dot", "title": "whole Neighbors: turtle", "value": 1}]);
+                  edges = new vis.DataSet([{"from": "alligator", "to": "bad", "value": 2}, {"from": "alligator", "to": "big", "value": 2}, {"from": "alligator", "to": "last", "value": 4}, {"from": "alligator", "to": "sharp", "value": 2}, {"from": "alligator", "to": "sure", "value": 2}, {"from": "butterfly", "to": "different", "value": 2}, {"from": "butterfly", "to": "stuffed", "value": 2}, {"from": "cat", "to": "different", "value": 4}, {"from": "cat", "to": "furry", "value": 2}, {"from": "cat", "to": "half", "value": 4}, {"from": "cat", "to": "magic", "value": 2}, {"from": "cat", "to": "new", "value": 2}, {"from": "cat", "to": "other", "value": 2}, {"from": "cat", "to": "royal", "value": 2}, {"from": "cat", "to": "same", "value": 2}, {"from": "cat", "to": "sensitive", "value": 2}, {"from": "cat", "to": "soft", "value": 2}, {"from": "cat", "to": "special", "value": 2}, {"from": "cat", "to": "strong", "value": 4}, {"from": "dolphin", "to": "finished", "value": 2}, {"from": "dolphin", "to": "next", "value": 2}, {"from": "dolphin", "to": "other", "value": 2}, {"from": "duck", "to": "good", "value": 2}, {"from": "duck", "to": "kinda", "value": 2}, {"from": "duck", "to": "next", "value": 2}, {"from": "elephant", "to": "big", "value": 2}, {"from": "elephant", "to": "funny", "value": 2}, {"from": "elephant", "to": "last", "value": 10}, {"from": "elephant", "to": "long", "value": 2}, {"from": "frog", "to": "back", "value": 2}, {"from": "frog", "to": "half", "value": 2}, {"from": "frog", "to": "same", "value": 2}, {"from": "frog", "to": "white", "value": 2}, {"from": "horse", "to": "careful", "value": 2}, {"from": "horse", "to": "giddy", "value": 2}, {"from": "horse", "to": "last", "value": 4}, {"from": "horse", "to": "long", "value": 2}, {"from": "horse", "to": "old", "value": 4}, {"from": "ladybug", "to": "big", "value": 4}, {"from": "ladybug", "to": "black", "value": 6}, {"from": "ladybug", "to": "different", "value": 2}, {"from": "ladybug", "to": "plain", "value": 2}, {"from": "ladybug", "to": "real", "value": 2}, {"from": "ladybug", "to": "red", "value": 6}, {"from": "ladybug", "to": "sure", "value": 2}, {"from": "lion", "to": "more", "value": 2}, {"from": "lion", "to": "next", "value": 2}, {"from": "lion", "to": "pointy", "value": 2}, {"from": "lobster", "to": "big", "value": 2}, {"from": "lobster", "to": "last", "value": 2}, {"from": "lobster", "to": "much", "value": 2}, {"from": "lobster", "to": "small", "value": 4}, {"from": "owl", "to": "fun", "value": 3}, {"from": "owl", "to": "funny", "value": 1}, {"from": "owl", "to": "gentle", "value": 6}, {"from": "owl", "to": "hot", "value": 2}, {"from": "owl", "to": "kooky", "value": 2}, {"from": "owl", "to": "little", "value": 2}, {"from": "owl", "to": "red", "value": 4}, {"from": "parrot", "to": "best", "value": 2}, {"from": "parrot", "to": "blue", "value": 2}, {"from": "parrot", "to": "green", "value": 4}, {"from": "parrot", "to": "hungry", "value": 2}, {"from": "parrot", "to": "little", "value": 2}, {"from": "parrot", "to": "other", "value": 2}, {"from": "parrot", "to": "pointy", "value": 2}, {"from": "parrot", "to": "sharp", "value": 2}, {"from": "parrot", "to": "yellow", "value": 4}, {"from": "penguin", "to": "chilly", "value": 2}, {"from": "penguin", "to": "cold", "value": 4}, {"from": "penguin", "to": "dark", "value": 2}, {"from": "penguin", "to": "last", "value": 6}, {"from": "penguin", "to": "more", "value": 2}, {"from": "penguin", "to": "okay", "value": 2}, {"from": "pig", "to": "bad", "value": 2}, {"from": "pig", "to": "big", "value": 2}, {"from": "pig", "to": "black", "value": 2}, {"from": "pig", "to": "ceramic", "value": 4}, {"from": "pig", "to": "funny", "value": 2}, {"from": "pig", "to": "good", "value": 3}, {"from": "pig", "to": "gooey", "value": 1}, {"from": "pig", "to": "green", "value": 2}, {"from": "pig", "to": "hard", "value": 2}, {"from": "pig", "to": "heavier", "value": 2}, {"from": "pig", "to": "last", "value": 2}, {"from": "pig", "to": "long", "value": 2}, {"from": "pig", "to": "more", "value": 2}, {"from": "pig", "to": "pink", "value": 2}, {"from": "pig", "to": "sick", "value": 4}, {"from": "pig", "to": "slimy", "value": 2}, {"from": "pig", "to": "strong", "value": 2}, {"from": "pig", "to": "yucky", "value": 4}, {"from": "puppy", "to": "much", "value": 2}, {"from": "puppy", "to": "pretty", "value": 2}, {"from": "rabbit", "to": "best", "value": 2}, {"from": "rabbit", "to": "blue", "value": 2}, {"from": "rabbit", "to": "close", "value": 2}, {"from": "rabbit", "to": "nice", "value": 2}, {"from": "rabbit", "to": "pointy", "value": 2}, {"from": "rabbit", "to": "purple", "value": 4}, {"from": "rabbit", "to": "red", "value": 2}, {"from": "rabbit", "to": "white", "value": 4}, {"from": "rabbit", "to": "yellow", "value": 2}, {"from": "skunk", "to": "bad", "value": 2}, {"from": "skunk", "to": "black", "value": 4}, {"from": "skunk", "to": "fuzzy", "value": 2}, {"from": "skunk", "to": "light", "value": 2}, {"from": "skunk", "to": "little", "value": 2}, {"from": "skunk", "to": "pointy", "value": 2}, {"from": "skunk", "to": "sharp", "value": 2}, {"from": "skunk", "to": "special", "value": 2}, {"from": "skunk", "to": "white", "value": 6}, {"from": "snake", "to": "alive", "value": 2}, {"from": "snake", "to": "big", "value": 4}, {"from": "snake", "to": "different", "value": 2}, {"from": "snake", "to": "half", "value": 2}, {"from": "snake", "to": "little", "value": 4}, {"from": "snake", "to": "longer", "value": 2}, {"from": "snake", "to": "same", "value": 2}, {"from": "turtle", "to": "afraid", "value": 2}, {"from": "turtle", "to": "big", "value": 4}, {"from": "turtle", "to": "deep", "value": 2}, {"from": "turtle", "to": "green", "value": 2}, {"from": "turtle", "to": "huge", "value": 2}, {"from": "turtle", "to": "much", "value": 2}, {"from": "turtle", "to": "pretty", "value": 2}, {"from": "turtle", "to": "right", "value": 4}, {"from": "turtle", "to": "sharp", "value": 2}, {"from": "turtle", "to": "slow", "value": 2}, {"from": "turtle", "to": "sure", "value": 2}, {"from": "turtle", "to": "whole", "value": 2}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

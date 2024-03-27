@@ -1,0 +1,250 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 750px;
+                 background-color: #222222;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+             #loadingBar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width: 100%;
+                 height: 750px;
+                 background-color:rgba(200,200,200,0.8);
+                 -webkit-transition: all 0.5s ease;
+                 -moz-transition: all 0.5s ease;
+                 -ms-transition: all 0.5s ease;
+                 -o-transition: all 0.5s ease;
+                 transition: all 0.5s ease;
+                 opacity:1;
+             }
+
+             #bar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width:20px;
+                 height:20px;
+                 margin:auto auto auto auto;
+                 border-radius:11px;
+                 border:2px solid rgba(30,30,30,0.05);
+                 background: rgb(0, 173, 246); /* Old browsers */
+                 box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
+             }
+
+             #border {
+                 position:absolute;
+                 top:10px;
+                 left:10px;
+                 width:500px;
+                 height:23px;
+                 margin:auto auto auto auto;
+                 box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
+                 border-radius:10px;
+             }
+
+             #text {
+                 position:absolute;
+                 top:8px;
+                 left:530px;
+                 width:30px;
+                 height:50px;
+                 margin:auto auto auto auto;
+                 font-size:22px;
+                 color: #000000;
+             }
+
+             div.outerBorder {
+                 position:relative;
+                 top:400px;
+                 width:600px;
+                 height:44px;
+                 margin:auto auto auto auto;
+                 border:8px solid rgba(0,0,0,0.1);
+                 background: rgb(252,252,252); /* Old browsers */
+                 background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+                 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+                 background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+                 background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+                 background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
+                 background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
+                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+                 border-radius:72px;
+                 box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+             }
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+            <div id="loadingBar">
+              <div class="outerBorder">
+                <div id="text">0%</div>
+                <div id="border">
+                  <div id="bar"></div>
+                </div>
+              </div>
+            </div>
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "font": {"color": "white"}, "id": "baby", "label": "baby", "shape": "dot", "title": "baby Neighbors: tiny, funny, ready", "value": 3}, {"color": "pink", "font": {"color": "white"}, "id": "funny", "label": "funny", "shape": "dot", "title": "funny Neighbors: baby, clown, witch, ballerina", "value": 4}, {"color": "pink", "font": {"color": "white"}, "id": "ready", "label": "ready", "shape": "dot", "title": "ready Neighbors: baby, baseball player", "value": 2}, {"color": "pink", "font": {"color": "white"}, "id": "tiny", "label": "tiny", "shape": "dot", "title": "tiny Neighbors: baby", "value": 1}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "ballerina", "label": "ballerina", "shape": "dot", "title": "ballerina Neighbors: black, pretty, yellow, special, pink, funny, red, different, light", "value": 9}, {"color": "pink", "font": {"color": "white"}, "id": "black", "label": "black", "shape": "dot", "title": "black Neighbors: king, firefighter, police officer, old woman, judge, ballerina", "value": 6}, {"color": "pink", "font": {"color": "white"}, "id": "different", "label": "different", "shape": "dot", "title": "different Neighbors: ballerina", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "light", "label": "light", "shape": "dot", "title": "light Neighbors: old woman, ballerina", "value": 2}, {"color": "pink", "font": {"color": "white"}, "id": "pink", "label": "pink", "shape": "dot", "title": "pink Neighbors: old woman, ballerina", "value": 2}, {"color": "pink", "font": {"color": "white"}, "id": "pretty", "label": "pretty", "shape": "dot", "title": "pretty Neighbors: doctor, ballerina", "value": 2}, {"color": "pink", "font": {"color": "white"}, "id": "red", "label": "red", "shape": "dot", "title": "red Neighbors: old woman, ballerina", "value": 2}, {"color": "pink", "font": {"color": "white"}, "id": "special", "label": "special", "shape": "dot", "title": "special Neighbors: old woman, ballerina", "value": 2}, {"color": "pink", "font": {"color": "white"}, "id": "yellow", "label": "yellow", "shape": "dot", "title": "yellow Neighbors: old woman, king, ballerina", "value": 3}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "baseball player", "label": "baseball player", "shape": "dot", "title": "baseball player Neighbors: else, other, nice, ready", "value": 4}, {"color": "pink", "font": {"color": "white"}, "id": "else", "label": "else", "shape": "dot", "title": "else Neighbors: baseball player", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "nice", "label": "nice", "shape": "dot", "title": "nice Neighbors: baseball player, king", "value": 2}, {"color": "pink", "font": {"color": "white"}, "id": "other", "label": "other", "shape": "dot", "title": "other Neighbors: witch, baseball player, police officer", "value": 3}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "clown", "label": "clown", "shape": "dot", "title": "clown Neighbors: silly, big, last, funny, cool, little, afraid, hard, scared, easy", "value": 10}, {"color": "pink", "font": {"color": "white"}, "id": "afraid", "label": "afraid", "shape": "dot", "title": "afraid Neighbors: clown", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "big", "label": "big", "shape": "dot", "title": "big Neighbors: clown, weighlifter, firefighter, pilot, surfer, weightlifter", "value": 6}, {"color": "pink", "font": {"color": "white"}, "id": "cool", "label": "cool", "shape": "dot", "title": "cool Neighbors: clown, race car driver", "value": 2}, {"color": "pink", "font": {"color": "white"}, "id": "easy", "label": "easy", "shape": "dot", "title": "easy Neighbors: clown", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "hard", "label": "hard", "shape": "dot", "title": "hard Neighbors: clown, football player, king", "value": 3}, {"color": "pink", "font": {"color": "white"}, "id": "last", "label": "last", "shape": "dot", "title": "last Neighbors: clown, football player, teacher, pilot, witch", "value": 5}, {"color": "pink", "font": {"color": "white"}, "id": "little", "label": "little", "shape": "dot", "title": "little Neighbors: clown, football player, judge, teacher", "value": 4}, {"color": "pink", "font": {"color": "white"}, "id": "scared", "label": "scared", "shape": "dot", "title": "scared Neighbors: clown", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "silly", "label": "silly", "shape": "dot", "title": "silly Neighbors: clown", "value": 1}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "doctor", "label": "doctor", "shape": "dot", "title": "doctor Neighbors: evil, good, sick, new, patient, pretty", "value": 6}, {"color": "pink", "font": {"color": "white"}, "id": "evil", "label": "evil", "shape": "dot", "title": "evil Neighbors: doctor", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "good", "label": "good", "shape": "dot", "title": "good Neighbors: firefighter, doctor, surfer, pilot", "value": 4}, {"color": "pink", "font": {"color": "white"}, "id": "new", "label": "new", "shape": "dot", "title": "new Neighbors: police officer, doctor, teacher", "value": 3}, {"color": "pink", "font": {"color": "white"}, "id": "patient", "label": "patient", "shape": "dot", "title": "patient Neighbors: doctor", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "sick", "label": "sick", "shape": "dot", "title": "sick Neighbors: doctor", "value": 1}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "farmer", "label": "farmer", "shape": "dot", "title": "farmer Neighbors: own", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "own", "label": "own", "shape": "dot", "title": "own Neighbors: farmer", "value": 1}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "firefighter", "label": "firefighter", "shape": "dot", "title": "firefighter Neighbors: black, good, much, white, green, hot, big", "value": 7}, {"color": "pink", "font": {"color": "white"}, "id": "green", "label": "green", "shape": "dot", "title": "green Neighbors: firefighter, old woman, witch, king", "value": 4}, {"color": "pink", "font": {"color": "white"}, "id": "hot", "label": "hot", "shape": "dot", "title": "hot Neighbors: firefighter, surfer", "value": 2}, {"color": "pink", "font": {"color": "white"}, "id": "much", "label": "much", "shape": "dot", "title": "much Neighbors: firefighter, old woman, teacher", "value": 3}, {"color": "pink", "font": {"color": "white"}, "id": "white", "label": "white", "shape": "dot", "title": "white Neighbors: firefighter, race car driver, judge", "value": 3}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "football player", "label": "football player", "shape": "dot", "title": "football player Neighbors: hard, last, little, more", "value": 4}, {"color": "pink", "font": {"color": "white"}, "id": "more", "label": "more", "shape": "dot", "title": "more Neighbors: football player, police officer, pilot, race car driver, judge", "value": 5}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "judge", "label": "judge", "shape": "dot", "title": "judge Neighbors: black, mad, white, bad, little, tricky, mean, more", "value": 8}, {"color": "pink", "font": {"color": "white"}, "id": "bad", "label": "bad", "shape": "dot", "title": "bad Neighbors: police officer, weightlifter, judge", "value": 3}, {"color": "pink", "font": {"color": "white"}, "id": "mad", "label": "mad", "shape": "dot", "title": "mad Neighbors: weightlifter, judge", "value": 2}, {"color": "pink", "font": {"color": "white"}, "id": "mean", "label": "mean", "shape": "dot", "title": "mean Neighbors: judge, pirate", "value": 2}, {"color": "pink", "font": {"color": "white"}, "id": "tricky", "label": "tricky", "shape": "dot", "title": "tricky Neighbors: judge", "value": 1}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "king", "label": "king", "shape": "dot", "title": "king Neighbors: black, blond, blue, strong, neat, royal, yellow, magic, green, dark, right, nice, hard, alive, very", "value": 15}, {"color": "pink", "font": {"color": "white"}, "id": "alive", "label": "alive", "shape": "dot", "title": "alive Neighbors: king", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "blond", "label": "blond", "shape": "dot", "title": "blond Neighbors: king", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "blue", "label": "blue", "shape": "dot", "title": "blue Neighbors: old woman, king", "value": 2}, {"color": "pink", "font": {"color": "white"}, "id": "dark", "label": "dark", "shape": "dot", "title": "dark Neighbors: king", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "magic", "label": "magic", "shape": "dot", "title": "magic Neighbors: king", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "neat", "label": "neat", "shape": "dot", "title": "neat Neighbors: king", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "right", "label": "right", "shape": "dot", "title": "right Neighbors: king", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "royal", "label": "royal", "shape": "dot", "title": "royal Neighbors: king", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "strong", "label": "strong", "shape": "dot", "title": "strong Neighbors: weighlifter, weightlifter, king", "value": 3}, {"color": "pink", "font": {"color": "white"}, "id": "very", "label": "very", "shape": "dot", "title": "very Neighbors: king", "value": 1}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "old woman", "label": "old woman", "shape": "dot", "title": "old woman Neighbors: black, blue, much, old, ski, yellow, special, green, pink, red, silver, grey, brown, light", "value": 14}, {"color": "pink", "font": {"color": "white"}, "id": "brown", "label": "brown", "shape": "dot", "title": "brown Neighbors: old woman", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "grey", "label": "grey", "shape": "dot", "title": "grey Neighbors: old woman", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "old", "label": "old", "shape": "dot", "title": "old Neighbors: old woman, teacher", "value": 2}, {"color": "pink", "font": {"color": "white"}, "id": "silver", "label": "silver", "shape": "dot", "title": "silver Neighbors: old woman", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "ski", "label": "ski", "shape": "dot", "title": "ski Neighbors: old woman", "value": 1}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "pilot", "label": "pilot", "shape": "dot", "title": "pilot Neighbors: good, big, last, more, asleep", "value": 5}, {"color": "pink", "font": {"color": "white"}, "id": "asleep", "label": "asleep", "shape": "dot", "title": "asleep Neighbors: pilot", "value": 1}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "pirate", "label": "pirate", "shape": "dot", "title": "pirate Neighbors: golden, pirate, mean", "value": 3}, {"color": "pink", "font": {"color": "white"}, "id": "golden", "label": "golden", "shape": "dot", "title": "golden Neighbors: pirate", "value": 1}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "police officer", "label": "police officer", "shape": "dot", "title": "police officer Neighbors: black, other, haunted, okay, new, bad, important, sure, sorry, more, ridiculous", "value": 11}, {"color": "pink", "font": {"color": "white"}, "id": "haunted", "label": "haunted", "shape": "dot", "title": "haunted Neighbors: police officer", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "important", "label": "important", "shape": "dot", "title": "important Neighbors: police officer", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "okay", "label": "okay", "shape": "dot", "title": "okay Neighbors: police officer", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "ridiculous", "label": "ridiculous", "shape": "dot", "title": "ridiculous Neighbors: police officer", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "sorry", "label": "sorry", "shape": "dot", "title": "sorry Neighbors: police officer", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "sure", "label": "sure", "shape": "dot", "title": "sure Neighbors: police officer", "value": 1}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "race car driver", "label": "race car driver", "shape": "dot", "title": "race car driver Neighbors: white, purple, fast, cool, more", "value": 5}, {"color": "pink", "font": {"color": "white"}, "id": "fast", "label": "fast", "shape": "dot", "title": "fast Neighbors: race car driver", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "purple", "label": "purple", "shape": "dot", "title": "purple Neighbors: race car driver", "value": 1}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "surfer", "label": "surfer", "shape": "dot", "title": "surfer Neighbors: dangerous, good, older, wet, big, careful, hot, deep", "value": 8}, {"color": "pink", "font": {"color": "white"}, "id": "careful", "label": "careful", "shape": "dot", "title": "careful Neighbors: surfer", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "dangerous", "label": "dangerous", "shape": "dot", "title": "dangerous Neighbors: surfer", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "deep", "label": "deep", "shape": "dot", "title": "deep Neighbors: surfer", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "older", "label": "older", "shape": "dot", "title": "older Neighbors: surfer", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "wet", "label": "wet", "shape": "dot", "title": "wet Neighbors: surfer", "value": 1}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "teacher", "label": "teacher", "shape": "dot", "title": "teacher Neighbors: close, much, many, third, new, last, bored, little, glad, old, long", "value": 11}, {"color": "pink", "font": {"color": "white"}, "id": "bored", "label": "bored", "shape": "dot", "title": "bored Neighbors: teacher", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "close", "label": "close", "shape": "dot", "title": "close Neighbors: teacher", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "glad", "label": "glad", "shape": "dot", "title": "glad Neighbors: teacher", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "long", "label": "long", "shape": "dot", "title": "long Neighbors: teacher", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "many", "label": "many", "shape": "dot", "title": "many Neighbors: teacher", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "third", "label": "third", "shape": "dot", "title": "third Neighbors: teacher", "value": 1}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "weighlifter", "label": "weighlifter", "shape": "dot", "title": "weighlifter Neighbors: next, tough, strong, big", "value": 4}, {"color": "pink", "font": {"color": "white"}, "id": "next", "label": "next", "shape": "dot", "title": "next Neighbors: weighlifter", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "tough", "label": "tough", "shape": "dot", "title": "tough Neighbors: weighlifter", "value": 1}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "weightlifter", "label": "weightlifter", "shape": "dot", "title": "weightlifter Neighbors: mad, scary, heavy, big, bad, giant, regular, faster, naked, strong", "value": 10}, {"color": "pink", "font": {"color": "white"}, "id": "faster", "label": "faster", "shape": "dot", "title": "faster Neighbors: weightlifter", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "giant", "label": "giant", "shape": "dot", "title": "giant Neighbors: weightlifter", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "heavy", "label": "heavy", "shape": "dot", "title": "heavy Neighbors: weightlifter", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "naked", "label": "naked", "shape": "dot", "title": "naked Neighbors: weightlifter", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "regular", "label": "regular", "shape": "dot", "title": "regular Neighbors: weightlifter", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "scary", "label": "scary", "shape": "dot", "title": "scary Neighbors: witch, weightlifter", "value": 2}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "witch", "label": "witch", "shape": "dot", "title": "witch Neighbors: scary, polar, other, green, last, funny, spooky, alone", "value": 8}, {"color": "pink", "font": {"color": "white"}, "id": "alone", "label": "alone", "shape": "dot", "title": "alone Neighbors: witch", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "polar", "label": "polar", "shape": "dot", "title": "polar Neighbors: witch", "value": 1}, {"color": "pink", "font": {"color": "white"}, "id": "spooky", "label": "spooky", "shape": "dot", "title": "spooky Neighbors: witch", "value": 1}]);
+                  edges = new vis.DataSet([{"from": "baby", "to": "funny", "value": 1}, {"from": "baby", "to": "ready", "value": 1}, {"from": "baby", "to": "tiny", "value": 1}, {"from": "ballerina", "to": "black", "value": 3}, {"from": "ballerina", "to": "different", "value": 1}, {"from": "ballerina", "to": "funny", "value": 1}, {"from": "ballerina", "to": "light", "value": 1}, {"from": "ballerina", "to": "pink", "value": 2}, {"from": "ballerina", "to": "pretty", "value": 3}, {"from": "ballerina", "to": "red", "value": 1}, {"from": "ballerina", "to": "special", "value": 1}, {"from": "ballerina", "to": "yellow", "value": 2}, {"from": "baseball player", "to": "else", "value": 1}, {"from": "baseball player", "to": "nice", "value": 1}, {"from": "baseball player", "to": "other", "value": 1}, {"from": "baseball player", "to": "ready", "value": 1}, {"from": "clown", "to": "afraid", "value": 1}, {"from": "clown", "to": "big", "value": 1}, {"from": "clown", "to": "cool", "value": 1}, {"from": "clown", "to": "easy", "value": 1}, {"from": "clown", "to": "funny", "value": 4}, {"from": "clown", "to": "hard", "value": 2}, {"from": "clown", "to": "last", "value": 2}, {"from": "clown", "to": "little", "value": 1}, {"from": "clown", "to": "scared", "value": 3}, {"from": "clown", "to": "silly", "value": 1}, {"from": "doctor", "to": "evil", "value": 1}, {"from": "doctor", "to": "good", "value": 3}, {"from": "doctor", "to": "new", "value": 1}, {"from": "doctor", "to": "patient", "value": 1}, {"from": "doctor", "to": "pretty", "value": 1}, {"from": "doctor", "to": "sick", "value": 4}, {"from": "farmer", "to": "own", "value": 2}, {"from": "firefighter", "to": "big", "value": 1}, {"from": "firefighter", "to": "black", "value": 2}, {"from": "firefighter", "to": "good", "value": 1}, {"from": "firefighter", "to": "green", "value": 1}, {"from": "firefighter", "to": "hot", "value": 1}, {"from": "firefighter", "to": "much", "value": 1}, {"from": "firefighter", "to": "white", "value": 1}, {"from": "football player", "to": "hard", "value": 1}, {"from": "football player", "to": "last", "value": 1}, {"from": "football player", "to": "little", "value": 2}, {"from": "football player", "to": "more", "value": 1}, {"from": "judge", "to": "bad", "value": 2}, {"from": "judge", "to": "black", "value": 1}, {"from": "judge", "to": "little", "value": 1}, {"from": "judge", "to": "mad", "value": 1}, {"from": "judge", "to": "mean", "value": 1}, {"from": "judge", "to": "more", "value": 1}, {"from": "judge", "to": "tricky", "value": 1}, {"from": "judge", "to": "white", "value": 1}, {"from": "king", "to": "alive", "value": 3}, {"from": "king", "to": "black", "value": 1}, {"from": "king", "to": "blond", "value": 1}, {"from": "king", "to": "blue", "value": 1}, {"from": "king", "to": "dark", "value": 1}, {"from": "king", "to": "green", "value": 2}, {"from": "king", "to": "hard", "value": 2}, {"from": "king", "to": "magic", "value": 4}, {"from": "king", "to": "neat", "value": 1}, {"from": "king", "to": "nice", "value": 1}, {"from": "king", "to": "right", "value": 1}, {"from": "king", "to": "royal", "value": 2}, {"from": "king", "to": "strong", "value": 1}, {"from": "king", "to": "very", "value": 1}, {"from": "king", "to": "yellow", "value": 1}, {"from": "old woman", "to": "black", "value": 3}, {"from": "old woman", "to": "blue", "value": 5}, {"from": "old woman", "to": "brown", "value": 1}, {"from": "old woman", "to": "green", "value": 3}, {"from": "old woman", "to": "grey", "value": 5}, {"from": "old woman", "to": "light", "value": 1}, {"from": "old woman", "to": "much", "value": 1}, {"from": "old woman", "to": "old", "value": 9}, {"from": "old woman", "to": "pink", "value": 2}, {"from": "old woman", "to": "red", "value": 2}, {"from": "old woman", "to": "silver", "value": 1}, {"from": "old woman", "to": "ski", "value": 1}, {"from": "old woman", "to": "special", "value": 1}, {"from": "old woman", "to": "yellow", "value": 4}, {"from": "pilot", "to": "asleep", "value": 1}, {"from": "pilot", "to": "big", "value": 1}, {"from": "pilot", "to": "good", "value": 1}, {"from": "pilot", "to": "last", "value": 1}, {"from": "pilot", "to": "more", "value": 1}, {"from": "pirate", "to": "golden", "value": 1}, {"from": "pirate", "to": "mean", "value": 1}, {"from": "pirate", "to": "pirate", "value": 1}, {"from": "police officer", "to": "bad", "value": 6}, {"from": "police officer", "to": "black", "value": 1}, {"from": "police officer", "to": "haunted", "value": 2}, {"from": "police officer", "to": "important", "value": 1}, {"from": "police officer", "to": "more", "value": 2}, {"from": "police officer", "to": "new", "value": 1}, {"from": "police officer", "to": "okay", "value": 1}, {"from": "police officer", "to": "other", "value": 1}, {"from": "police officer", "to": "ridiculous", "value": 1}, {"from": "police officer", "to": "sorry", "value": 1}, {"from": "police officer", "to": "sure", "value": 1}, {"from": "race car driver", "to": "cool", "value": 1}, {"from": "race car driver", "to": "fast", "value": 1}, {"from": "race car driver", "to": "more", "value": 1}, {"from": "race car driver", "to": "purple", "value": 2}, {"from": "race car driver", "to": "white", "value": 1}, {"from": "surfer", "to": "big", "value": 1}, {"from": "surfer", "to": "careful", "value": 1}, {"from": "surfer", "to": "dangerous", "value": 1}, {"from": "surfer", "to": "deep", "value": 1}, {"from": "surfer", "to": "good", "value": 1}, {"from": "surfer", "to": "hot", "value": 1}, {"from": "surfer", "to": "older", "value": 1}, {"from": "surfer", "to": "wet", "value": 1}, {"from": "teacher", "to": "bored", "value": 1}, {"from": "teacher", "to": "close", "value": 1}, {"from": "teacher", "to": "glad", "value": 1}, {"from": "teacher", "to": "last", "value": 3}, {"from": "teacher", "to": "little", "value": 1}, {"from": "teacher", "to": "long", "value": 2}, {"from": "teacher", "to": "many", "value": 2}, {"from": "teacher", "to": "much", "value": 1}, {"from": "teacher", "to": "new", "value": 3}, {"from": "teacher", "to": "old", "value": 2}, {"from": "teacher", "to": "third", "value": 1}, {"from": "weighlifter", "to": "big", "value": 1}, {"from": "weighlifter", "to": "next", "value": 1}, {"from": "weighlifter", "to": "strong", "value": 1}, {"from": "weighlifter", "to": "tough", "value": 1}, {"from": "weightlifter", "to": "bad", "value": 2}, {"from": "weightlifter", "to": "big", "value": 4}, {"from": "weightlifter", "to": "faster", "value": 2}, {"from": "weightlifter", "to": "giant", "value": 1}, {"from": "weightlifter", "to": "heavy", "value": 1}, {"from": "weightlifter", "to": "mad", "value": 1}, {"from": "weightlifter", "to": "naked", "value": 2}, {"from": "weightlifter", "to": "regular", "value": 1}, {"from": "weightlifter", "to": "scary", "value": 2}, {"from": "weightlifter", "to": "strong", "value": 6}, {"from": "witch", "to": "alone", "value": 1}, {"from": "witch", "to": "funny", "value": 1}, {"from": "witch", "to": "green", "value": 1}, {"from": "witch", "to": "last", "value": 2}, {"from": "witch", "to": "other", "value": 1}, {"from": "witch", "to": "polar", "value": 1}, {"from": "witch", "to": "scary", "value": 3}, {"from": "witch", "to": "spooky", "value": 1}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+                      network.on("stabilizationProgress", function(params) {
+                          document.getElementById('loadingBar').removeAttribute("style");
+                          var maxWidth = 496;
+                          var minWidth = 20;
+                          var widthFactor = params.iterations/params.total;
+                          var width = Math.max(minWidth,maxWidth * widthFactor);
+                          document.getElementById('bar').style.width = width + 'px';
+                          document.getElementById('text').innerHTML = Math.round(widthFactor*100) + '%';
+                      });
+                      network.once("stabilizationIterationsDone", function() {
+                          document.getElementById('text').innerHTML = '100%';
+                          document.getElementById('bar').style.width = '496px';
+                          document.getElementById('loadingBar').style.opacity = 0;
+                          // really clean the dom element
+                          setTimeout(function () {document.getElementById('loadingBar').style.display = 'none';}, 500);
+                      });
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
