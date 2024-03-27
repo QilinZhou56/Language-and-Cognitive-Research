@@ -55,6 +55,7 @@ For example, in the instance where the child describes the surfer, one phrase us
 - ![Adjs Across Categories by spaCy](https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/adj_freq_weightlifter.plot.png)
 - ![N_grams](https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/top_10_social.png)
 - ![Food Adjs Frequency](https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/top_10_bigram_social.png)
+- ![Cat as a Neuron](https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/neuron_cat.png)
   
 [View Pair-wise Association](https://htmlpreview.github.io/?https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/food_adj_referent.html)
 
