@@ -83,9 +83,14 @@ If not worked properly, you could reference [HTML](https://github.com/QilinZhou5
 
 ## Findings
 Our findings reveal interesting patterns in the use of adjectives by four-year-old children:
-- For food referents, children commonly used color, size, and taste adjectives, while **quality or functional adjectives were less frequent**.
-- In describing human referents, children focused more on perceptual features and **less on inherent qualities like "alive", "good", or "kind"**.
-- There was a larger variety of adjectives used for food referents compared to human referents, indicating a **protracted process in adjective usage** relative to noun acquisition.
+1) Overall, after feature engineering, more adjective counts for animal referents than food referents, than social referents (334 > 256 > 231).
+2) Analysis by domain:
+- In descriptions of social or human referents, children predominantly **highlighted perceptual attributes such as "black," "big," and "strong,"** while they **seldom focused on intrinsic traits or personalities, such as "bad," "good," "scary," and "mean."**
+- For food referents, children commonly used color, size, and taste adjectives, while **quality or functional adjectives such as "healthy" and "fresh" were less frequent**.
+- In the context of animal referents, the range of adjectives used is notably broad and vibrant, encompassing intrinsic traits like "afraid," situational adjectives such as "giddy," and a multitude of perceptual adjectives. This diversity reflects the multifaceted ways in which children observe and describe animals, capturing their behaviors, emotions, physical characteristics, and even responses to various situations.
+- There was a larger variety of adjectives used for animal referents compared to food and human referents, indicating a **protracted process in adjective usage** relative to noun acquisition.'
+3) PCA TF-IDF analysis:
+The observation that points in the PCA TF-IDF plot for social referents are much sparser compared to those in the animal and food plots implies that four-year-old children exhibit more uniform adjective usage patterns when discussing animal and food referents. Conversely, the variation in how they describe human referents suggests a divergent trajectory in adjective acquisition. This divergence might indicate that children's experiences with, perceptions of, and the complexity involved in describing human characteristics are more varied than those related to animals and food, leading to a broader spectrum of descriptive language use.
 
 ## Cross-Validation
 1. We extended our research by conducting cross-validation with other linguistic transcripts. This further established spaCy transformers as a robust tool for identifying parts of speech and analyzing language patterns in young children, with consistent 90% **baseline** accuracy. 
