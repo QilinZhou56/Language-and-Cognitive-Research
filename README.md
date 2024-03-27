@@ -52,7 +52,7 @@ For example, in the instance where the child describes the surfer, one phrase us
 - **Pyvis**: To visualize the network associations between adjectives and different types of referents (i.e., social, food, animals).
 
 ## Sample Visualization
-- ![Adjs Across Categories by spaCy](https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/adj_freq_weightlifter.png)
+- ![Adjs Across Categories by spaCy](https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/adj_freq_weightlifter.plot.png)
 - ![N_grams](https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/top_10_social.png)
 - ![Food Adjs Frequency](https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/top_10_bigram_social.png)
   
