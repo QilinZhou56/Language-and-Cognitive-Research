@@ -52,10 +52,26 @@ For example, in the instance where the child describes the surfer, one phrase us
 - **Pyvis**: To visualize the network associations between adjectives and different types of referents (i.e., social, food, animals).
 
 ## Sample Visualization
-- ![Adjs Across Categories by spaCy](https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/adj_freq_weightlifter.plot.png)
-- ![N_grams](https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/top_10_social.png)
-- ![Food Adjs Frequency](https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/top_10_bigram_social.png)
-- ![Cat as a Neuron](https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/neuron_cat.png)
+<p align="center">
+  <img src="https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/adj_freq_weightlifter.plot.png" alt="Adjs Across Categories by spaCy"><br>
+  <b>Adjectives Across Categories by spaCy</b>
+</p>
+
+<p align="center">
+  <img src="https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/top_10_social.png" alt="N_grams"><br>
+  <b>N-grams</b>
+</p>
+
+<p align="center">
+  <img src="https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/top_10_bigram_social.png" alt="Food Adjs Frequency"><br>
+  <b>Food Adjectives Frequency</b>
+</p>
+
+<p align="center">
+  <img src="https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/neuron_cat.png" alt="Cat as a Neuron"><br>
+  <b>Cat as a Neuron</b>
+</p>
+
   
 [View Pair-wise Association](https://htmlpreview.github.io/?https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/food_adj_referent.html)
 
