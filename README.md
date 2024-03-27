@@ -13,17 +13,17 @@ This project, supervised by Dr. Catherine Sandhofer and led by graduate student 
 We analyzed 33 transcripts from the CHILDES database, specifically from Gelman's 2014 individual differences corpus. The transcripts are based on picture-reading activities involving one-referent pictures, conducted between children and their parents.
 - [Project Description for 2014 - Individual Differences Project](https://childes.talkbank.org/access/Eng-NA/Gelman.html)
 <p align="center">
-  <img src="king.png" width="100"><br>
+  <img src="king.png" width="400"><br>
   <em>Social Referent-King</em>
 </p>
 
 <p align="center">
-  <img src="penguin.png" width="100"><br>
+  <img src="penguin.png" width="400"><br>
   <em>Animal Referent-Penguin</em>
 </p>
 
 <p align="center">
-  <img src="ice-cream.png" width="100"><br>
+  <img src="ice-cream.png" width="400"><br>
   <em>Food Referent-Ice Cream</em>
 </p>
 
