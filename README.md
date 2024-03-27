@@ -70,6 +70,10 @@ For example, in the instance where the child describes the surfer, one phrase us
 <p align="center">
   <b>Cat as a Neuron</b>
   <img src="https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/neuron_cat.png" alt="Cat as a Neuron"><br>
+
+<p align="center">
+  <b>PCA TF-IDF For Social Referents</b>
+  <img src="https://github.com/QilinZhou56/Language-and-Cognitive-Research/blob/main/referential_communication/Result/standardized_PCA_social.png" alt="Cat as a Neuron"><br>
 </p>
 
   
