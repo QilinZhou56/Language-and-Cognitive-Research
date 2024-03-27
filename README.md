@@ -42,8 +42,13 @@ We only show C-R transcripts here for 33 children, but there are more in our Goo
 
 For example, in the instance where the child describes the surfer, one phrase used is "and um when it's really hot in the summer." Here, "hot" serves as an adjective that the child uses to characterize the ideal weather for surfing, rather than directly describing the surfer.
 
-**3)** Network Visualization
-- **Pyvis**: To visualize the associations between adjectives and different types of referents (e.g., social, food, animals).
+**3)** PCA TF-IDF Analysis
+- **TF-IDF (Term Frequency-Inverse Document Frequency)**: This metric quantifies the relevance of a term within an individual document in comparison to a collection of documents. In our analysis, a "document" refers to all utterances grouped by a child's participant ID within a specific category (social, food, animals) from a comprehensive compilation of children's speech. Therefore, TF-IDF measures the significance of an adjective in a child's description relative to the adjective usage across all children, highlighting unique or distinctive adjective usage by individual children.
+  
+- **PCA (Principal Component Analysis) with 2 Components**:  By applying PCA to the TF-IDF matrix and reducing it to two components, we simplify the complex data while retaining significant patterns. In this visualization, proximity between points indicates that children have similar adjective usage profiles in the TF-IDF space. This suggests that these children might exhibit common patterns in their descriptions of a certain type of referent, indicating shared strategies or similarities in how they perceive and articulate characteristics of social entities, foods, and animals. We have also add K-Means Clustering as an optional feature.
+- 
+**4)** Network Visualization
+- **Pyvis**: To visualize the associations between adjectives and different types of referents (i.e., social, food, animals).
 
 
 
